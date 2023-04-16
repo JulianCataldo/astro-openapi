@@ -1,0 +1,33 @@
+---
+import OpenApiGuiSwagger from './OpenApiGuiSwagger.astro';
+
+const schemaUrl = 'http://localhost:2402/api/openapi.json';
+
+// NOTE: Is it a good idea?
+export const prerender = true;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>API Reference</title>
+	</head>
+
+	<body>
+		<OpenApiGuiSwagger schemaUrl={schemaUrl} />
+	</body>
+</html>
+
+<style>
+	body {
+		background-color: #fafafa;
+	}
+
+	@media (prefers-color-scheme: dark) {
+		body {
+			background-color: #1f1f1f;
+		}
+	}
+</style>

@@ -1,0 +1,38 @@
+---
+export interface Props extends astroHTML.JSX.HTMLAttributes {
+	/**
+	 * **Default**: `https://petstore.swagger.io/v2/swagger.json`
+	 * */
+
+	schemaUrl: string;
+}
+
+const { schemaUrl = 'https://petstore.swagger.io/v2/swagger.json' } =
+	Astro.props as Props;
+---
+
+{schemaUrl && <open-api-gui data-url={schemaUrl} />}
+
+<script>
+	import './OpenApiGuiSwagger.client.ts';
+</script>
+
+<style>
+	body.swagger {
+		background-color: #fafafa;
+	}
+	@media (prefers-color-scheme: dark) {
+		body.swagger {
+			background-color: #1f1f1f;
+		}
+	}
+</style>
+
+<script>
+	if (import.meta.hot) {
+		import.meta.hot.on('vite:beforeFullReload', (e) => {
+			console.error(e);
+			throw new Error('(skipping full reload)');
+		});
+	}
+</script>

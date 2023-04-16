@@ -1,0 +1,43 @@
+{
+	"name": "@astro-openapi/gui-swagger",
+	"version": "0.0.0",
+	"description": "",
+	"keywords": [
+		"withastro",
+		"openapi",
+		"api",
+		"docs",
+		"specs-to-api",
+		"playground",
+		"gui",
+		"typegen",
+		"swagger-ui"
+	],
+	"license": "ISC",
+	"author": "Julian Cataldo",
+	"type": "module",
+	"main": "./index.ts",
+	"files": [
+		"./index.ts",
+		"./integration.ts",
+		"./OpenApiGuiSwagger.astro",
+		"./OpenApiGuiSwagger.client.ts",
+		"./gui-swagger-endpoint.astro",
+		"./lib/swagger-dark/LICENSE",
+		"./lib/swagger-dark/swagger-dark.css"
+	],
+	"scripts": {
+		"test": "echo \"Error: no test specified\" &amp;&amp; exit 1"
+	},
+	"dependencies": {
+		"swagger-ui": "^4.18.1"
+	},
+	"devDependencies": {
+		"@types/swagger-ui": "^3.52.0",
+		"astro": "^2.1.2",
+		"typescript": "^5.0.2"
+	},
+	"publishConfig": {
+		"access": "public"
+	}
+}
