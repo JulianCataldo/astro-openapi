@@ -1,5 +1,11 @@
 # @astro-openapi/client
 
+## 0.0.3
+
+### Patch Changes
+
+- [`6aeb231`](https://github.com/JulianCataldo/astro-openapi/commit/6aeb231c399eda30cfabc813e59dd2a76fbda9ea) Thanks [@JulianCataldo](https://github.com/JulianCataldo)! - Replace Swagger with the dist version + fix packaging issue
+
 ## 0.0.2
 
 ### Patch Changes
