@@ -1,0 +1,10 @@
+packages:
+  - ./demo
+  - ./docs
+  - ./packages/backend
+  - ./packages/typegen
+  - ./packages/bundler
+  - ./packages/client
+  - ./packages/gui-swagger
+  - ./packages/gui-elements
+  - ./packages/gui-redoc
