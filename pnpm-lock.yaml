@@ -104,7 +104,7 @@ importers:
       '@astro-openapi/client': latest
       '@astro-openapi/gui-elements': latest
       '@astro-openapi/gui-redoc': latest
-      '@astro-openapi/gui-swagger': workspace:gui-swagger
+      '@astro-openapi/gui-swagger': latest
       '@astro-openapi/typegen': latest
       '@faker-js/faker': 7.6.0
       astro: 2.1.2
@@ -114,13 +114,13 @@ importers:
       vite-plugin-top-level-await: ^1.3.0
     dependencies:
       '@apidevtools/swagger-parser': 10.1.0
-      '@astro-openapi/backend': 0.0.2_4otp2jzgmjp4x7xmrwlykhut6m
-      '@astro-openapi/bundler': 0.0.2_mc77lqfcxzdh6cmfps7camscxi
-      '@astro-openapi/client': 0.0.2_wiufrgfvszabtv4isdqexea6yy
-      '@astro-openapi/gui-elements': 0.0.2
-      '@astro-openapi/gui-redoc': 0.0.2
+      '@astro-openapi/backend': link:../packages/backend
+      '@astro-openapi/bundler': link:../packages/bundler
+      '@astro-openapi/client': link:../packages/client
+      '@astro-openapi/gui-elements': link:../packages/gui-elements
+      '@astro-openapi/gui-redoc': link:../packages/gui-redoc
       '@astro-openapi/gui-swagger': link:../packages/gui-swagger
-      '@astro-openapi/typegen': 0.0.2_vb5oxmff3hg6k2qkursabaw3ri
+      '@astro-openapi/typegen': link:../packages/typegen
       '@faker-js/faker': 7.6.0
       astro: 2.1.2
       openapi-backend: 5.9.1
@@ -361,105 +361,6 @@ packages:
       ajv: 8.12.0
       ajv-draft-04: 1.0.0_ajv@8.12.0
       call-me-maybe: 1.0.2
-    dev: false
-
-  /@astro-openapi/backend/0.0.2_4otp2jzgmjp4x7xmrwlykhut6m:
-    resolution:
-      {
-        integrity: sha512-kJtOyZgoZmuCHoBUkP/SOy0U3P9E/Cm2OOFGpdpevuHQPosp3pdpYtHm5SlRMKiUqoMw4cp+rySGgVFT7a+PQg==,
-      }
-    peerDependencies:
-      openapi-backend: ^5.9.1
-      vite-plugin-top-level-await: ^1.3.0
-    dependencies:
-      openapi-backend: 5.9.1
-      vite-plugin-top-level-await: 1.3.0
-    dev: false
-
-  /@astro-openapi/bundler/0.0.2_mc77lqfcxzdh6cmfps7camscxi:
-    resolution:
-      {
-        integrity: sha512-LlyYh7rsMvu1psM29udZo7aDjFNsuRzwERKI3V0bz2hxk2AHQ1db3W443YnmRz5ShzcfZH866RitmeEEmo6rkQ==,
-      }
-    peerDependencies:
-      '@apidevtools/swagger-parser': ^10.1.0
-    dependencies:
-      '@apidevtools/swagger-parser': 10.1.0
-    dev: false
-
-  /@astro-openapi/client/0.0.2_wiufrgfvszabtv4isdqexea6yy:
-    resolution:
-      {
-        integrity: sha512-FkEp0zqsJZC1k0czMr9BfmLunEw7j+LUc8Xi4ScChv/O1EW+ya6lgTE45JhoAom0Qrm9kM1Er4DLrYxpX84cTw==,
-      }
-    peerDependencies:
-      openapi-client-axios: ^7.1.3
-      vite-plugin-top-level-await: ^1.3.0
-    dependencies:
-      openapi-client-axios: 7.1.3
-      vite-plugin-top-level-await: 1.3.0
-    dev: false
-
-  /@astro-openapi/gui-elements/0.0.2:
-    resolution:
-      {
-        integrity: sha512-nPY0F4Swl9szhjDEViG5ImGjLU0zwMaNto6+cRUM66elAooSFrY8HSb/YEv5POVUiJnDiJ6UYfX4eoZnu5pXXA==,
-      }
-    dependencies:
-      '@stoplight/elements': 7.7.15
-    transitivePeerDependencies:
-      - '@babel/core'
-      - '@babel/template'
-      - '@urql/core'
-      - encoding
-      - immer
-      - jotai-devtools
-      - jotai-immer
-      - jotai-optics
-      - jotai-redux
-      - jotai-tanstack-query
-      - jotai-urql
-      - jotai-valtio
-      - jotai-xstate
-      - jotai-zustand
-      - optics-ts
-      - react
-      - react-dom
-      - react-native
-      - supports-color
-      - valtio
-      - wonka
-      - xstate
-    dev: false
-
-  /@astro-openapi/gui-redoc/0.0.2:
-    resolution:
-      {
-        integrity: sha512-qi7AamJelDga2tQ/RmUWIAMJkOs6PNmZ3pI90he20vJ0pLcB9smu9h58/lGUpJMeAVD/eYSSxeRmvsBBSvEswg==,
-      }
-    dependencies:
-      redoc: 2.0.0
-    transitivePeerDependencies:
-      - core-js
-      - encoding
-      - mobx
-      - react
-      - react-dom
-      - react-native
-      - styled-components
-      - webpack
-    dev: false
-
-  /@astro-openapi/typegen/0.0.2_vb5oxmff3hg6k2qkursabaw3ri:
-    resolution:
-      {
-        integrity: sha512-za0JWxY/aVqkVdM+Jhh3qXcouYY2AIHU2ndaAazm4BipPlTZhBQ7stxenXdcxYsk9JllWRA78RMXBwaLcopvjg==,
-      }
-    peerDependencies:
-      openapi-client-axios-typegen: ^7.1.3
-    dependencies:
-      openapi-client-axios-typegen: 7.1.3
-      prettier: 2.8.7
     dev: false
 
   /@astrojs/compiler/0.31.4:
