@@ -24,6 +24,9 @@ concurrency: ${{ github.workflow }}-${{ github.ref }}
 
 env: { CI: true, FORCE_COLOR: true }
 
+permissions:
+  pull-requests: write
+
 # ==============================================================================
 
 jobs:
