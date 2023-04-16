@@ -1,0 +1,104 @@
+name: Continous Integration
+
+on:
+  workflow_dispatch:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    paths-ignore:
+      - 'docs/**'
+      - '.changeset/**'
+      - '.github/**'
+    branches-ignore:
+      - main
+      # - next
+  push:
+    paths-ignore:
+      - 'docs/**'
+      - '.changeset/**'
+      - '.github/**'
+    branches:
+      - main
+      - next
+
+concurrency: ${{ github.workflow }}-${{ github.ref }}
+
+env: { CI: true, FORCE_COLOR: true }
+
+# ==============================================================================
+
+jobs:
+  ci:
+    name: Continous Integration
+    timeout-minutes: 15
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      # ========================================================================
+
+      # - name: Setup Turbo
+      #   uses: JulianCataldo/gh-actions/turbo@main
+
+      # - name: Setup Node + PNPM
+      #   uses: JulianCataldo/gh-actions/node-pnpm@main
+
+      # ========================================================================
+
+      # - name: Linting
+      #   uses: JulianCataldo/gh-actions/linting@main
+
+      # ========================================================================
+
+      # - name: Build the whole mono-repo. packages
+      #   run: 'pnpm run build'
+
+      # ========================================================================
+
+      # - name: Unit tests — Vitest
+      #   run: pnpm run test
+
+      # ========================================================================
+
+      # - name: Build demo website
+      #   run: 'pnpm run build:demo'
+
+      # ========================================================================
+
+      # - name: Deploy to Vercel
+      #   uses: JulianCataldo/gh-actions/vercel@main
+      #   id: vercel-deploy
+      #   with:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #     VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+      #     VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+      #     VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+
+      # ========================================================================
+
+      # - name: Output URL
+      #   run: echo ${{steps.vercel-deploy.outputs.PREVIEW_URL}}
+
+      # - uses: JulianCataldo/gh-actions/playwright@main
+      #   name: E2E tests — Playwright
+      #   with: { PREVIEW_URL: '${{steps.vercel-deploy.outputs.PREVIEW_URL}}' }
+
+      # ========================================================================
+
+      - uses: JulianCataldo/gh-actions/release@main
+        if: github.ref == 'refs/heads/main'
+        name: Releases
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      # ========================================================================
+
+      - name: Merge [main] back to [next] branch
+        if: github.ref == 'refs/heads/main'
+        run: |
+          git checkout next && \
+          git merge main && git push && git checkout main
