@@ -1,0 +1,51 @@
+{
+	"name": "@astro-openapi/backend",
+	"version": "0.0.0",
+	"description": "An Astro JS Server-side-rendering (SSR) requests adapter for OpenAPI Backend.",
+	"keywords": [
+		"withastro",
+		"server",
+		"openapi",
+		"request",
+		"handler",
+		"api",
+		"operations",
+		"specs-to-api",
+		"backend",
+		"adapter"
+	],
+	"license": "ISC",
+	"author": "Julian Cataldo",
+	"type": "module",
+	"main": "./index.ts",
+	"// main": "./dist/index.js",
+	"files": [
+		"./api.ts",
+		"./entry-point.ts",
+		"./handle-astro-request.ts",
+		"./index.ts",
+		"./integration.ts"
+	],
+	"scripts": {
+		"build": "tsc",
+		"clean": "rm -rf dist .turbo",
+		"dev": "tsc -w",
+		"test": "echo \"No test specified\""
+	},
+	"dependencies": {
+		"openapi-backend": "^5.9.1"
+	},
+	"peerDependencies": {
+		"openapi-backend": "^5.9.1"
+	},
+	"devDependencies": {
+		"@types/html-escaper": "^3.0.0",
+		"@types/node": "^18.15.0",
+		"astro": "^2.1.2",
+		"openapi-types": "^12.1.0",
+		"typescript": "^4.9.5"
+	},
+	"publishConfig": {
+		"access": "public"
+	}
+}
