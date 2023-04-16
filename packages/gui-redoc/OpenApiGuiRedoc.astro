@@ -1,0 +1,42 @@
+---
+export interface Props {
+	/**
+	 * **Default**: `https://petstore.swagger.io/v2/swagger.json`
+	 * */
+
+	schemaUrl: string;
+}
+
+const { schemaUrl = 'https://petstore.swagger.io/v2/swagger.json' } =
+	Astro.props as Props;
+
+// TODO: Enclose in Web Components for scoping w. LINK tag for styles (at least)
+---
+
+<!-- 
+<script src="./node_modules/redoc/bundles/redoc.standalone.js"></script> -->
+<redoc spec-url={schemaUrl}></redoc>
+
+<script
+	src="https://cdn.redoc.ly/redoc/latest/bundles/redoc.standalone.js"
+	is:inline
+></script>
+<!-- <script src="redoc/bundles/redoc.standalone.js"></script> -->
+
+<!-- NOT WORKING -->
+<!-- <script>
+	import './node_modules/redoc/bundles/redoc.`standalone`.js';
+</script> -->
+
+<style>
+	/* @import '@stoplight/elements/styles.min.css'; */
+</style>
+
+<script>
+	if (import.meta.hot) {
+		import.meta.hot.on('vite:beforeFullReload', (e) => {
+			console.error(e);
+			throw new Error('(skipping full reload)');
+		});
+	}
+</script>

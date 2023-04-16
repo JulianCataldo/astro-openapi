@@ -1,0 +1,39 @@
+{
+	"name": "@astro-openapi/gui-redoc",
+	"version": "0.0.0",
+	"description": "",
+	"keywords": [
+		"withastro",
+		"openapi",
+		"api",
+		"docs",
+		"specs-to-api",
+		"playground",
+		"gui",
+		"typegen",
+		"redocly"
+	],
+	"license": "ISC",
+	"author": "Julian Cataldo",
+	"type": "module",
+	"main": "./index.ts",
+	"files": [
+		"./index.ts",
+		"./integration.ts",
+		"./gui-redoc-endpoint.astro",
+		"./OpenApiGuiRedoc.astro"
+	],
+	"scripts": {
+		"test": "echo \"Error: no test specified\" &amp;&amp; exit 1"
+	},
+	"dependencies": {
+		"redoc": "^2.0.0"
+	},
+	"devDependencies": {
+		"astro": "^2.1.2",
+		"typescript": "^4.9.4"
+	},
+	"publishConfig": {
+		"access": "public"
+	}
+}
