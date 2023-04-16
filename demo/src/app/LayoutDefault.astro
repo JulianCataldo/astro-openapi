@@ -1,0 +1,55 @@
+---
+import { SITE_TITLE } from './constants';
+
+const { ...attrs } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>{SITE_TITLE}</title>
+	</head>
+
+	<body {...attrs}>
+		<nav class="nav-main">
+			<a href="/"><strong>{SITE_TITLE}</strong></a>
+
+			<a href="/playground">Playground</a>
+			<a href="/swagger">Swagger</a>
+			<a href="/redoc">Redoc</a>
+			<a href="/elements">Elements</a>
+
+			<a href="/api/persons" target="_blank"
+				>"Get all Persons" endpoint (/api/pets)</a
+			>
+		</nav>
+
+		<header>
+			<slot name="header" />
+		</header>
+
+		<main>
+			<slot name="page-navigation" />
+			<slot name="content" />
+		</main>
+
+		<footer>
+			<hr />
+
+			<a href="http://github.com/JulianCataldo/astro-openapi" target="_blank"
+				>GitHub repository</a
+			>
+
+			<slot name="footer" />
+		</footer>
+	</body>
+</html>
+
+<style lang="scss" is:global>
+	@import './globals.scss';
+</style>
+<style lang="scss">
+	@import './LayoutDefault.scss';
+</style>

@@ -1,0 +1,19 @@
+---
+import LayoutDefault from '../app/LayoutDefault.astro';
+
+export const prerender = true;
+export function getStaticPaths() {
+	return [
+		//
+		'elements',
+		'redoc',
+		'swagger',
+	].map((docs) => ({ params: { docs } }));
+}
+
+const { docs } = Astro.params;
+---
+
+<LayoutDefault>
+	<iframe src={`/api-docs/${docs}`} slot="content"></iframe>
+</LayoutDefault>

@@ -1,0 +1,30 @@
+---
+import LayoutDefault from '../app/LayoutDefault.astro';
+
+import * as rootReadme from '../../README.md';
+
+export const prerender = true;
+---
+
+<LayoutDefault>
+	<article slot="content">
+		<section>
+			<rootReadme.Content />
+		</section>
+	</article>
+</LayoutDefault>
+
+<style lang="scss">
+	section {
+		margin: 10rem 0;
+	}
+
+	.zazz {
+		display: block;
+	}
+
+	footer {
+		margin: 1rem;
+		text-align: center;
+	}
+</style>

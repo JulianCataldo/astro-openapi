@@ -1,0 +1,29 @@
+{
+	"name": "@astro-openapi/demo",
+	"version": "0.0.0",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"astro": "astro",
+		"build": "astro build",
+		"dev": "astro dev",
+		"preview": "astro preview",
+		"start": "astro dev"
+	},
+	"dependencies": {
+		"@apidevtools/swagger-parser": "10.1.0",
+		"@astro-openapi/backend": "latest",
+		"@astro-openapi/bundler": "latest",
+		"@astro-openapi/client": "latest",
+		"@astro-openapi/gui-elements": "latest",
+		"@astro-openapi/gui-redoc": "latest",
+		"@astro-openapi/gui-swagger": "latest",
+		"@astro-openapi/typegen": "latest",
+		"@faker-js/faker": "7.6.0",
+		"astro": "2.1.2",
+		"openapi-backend": "5.9.1",
+		"openapi-client-axios": "7.1.3",
+		"openapi-client-axios-typegen": "7.1.3",
+		"vite-plugin-top-level-await": "^1.3.0"
+	}
+}

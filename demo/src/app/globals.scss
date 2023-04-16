@@ -1,0 +1,118 @@
+html {
+  box-sizing: border-box;
+  /*   scroll-behavior: smooth; */
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui;
+  font-size: calc(0.9em + 0.1vw + 0.1vh);
+  line-height: calc(1em + 1ex);
+  color: #222;
+  background: #f2f2f2;
+
+  @media (prefers-color-scheme: dark) {
+    color: #ccc;
+    background: #222;
+  }
+}
+
+article :is(h1, h2, h3, h4, h5, h6) {
+  margin: 2em 0;
+}
+
+a {
+  text-decoration: none;
+
+  &,
+  &:hover,
+  &:visited {
+    color: #008080;
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    color: #ccc;
+    background: #222;
+
+    &,
+    &:hover,
+    &:visited {
+      color: #1cc;
+    }
+  }
+}
+
+:root {
+  --main-nav-height: 4rem;
+
+  @media (prefers-color-scheme: dark) {
+    color-scheme: dark;
+  }
+}
+
+input,
+textarea,
+button {
+  font-family: system-ui;
+}
+
+button {
+  padding: 1em;
+}
+
+textarea {
+  padding: 1em;
+}
+
+hr {
+  margin: 3em 0;
+  border: 1px solid #555;
+}
+
+.git-only {
+  display: none;
+}
+
+code {
+  padding: 0.125rem 0.4rem;
+  color: #eee;
+  background: #333;
+  border-radius: 0.5rem;
+
+  @media (prefers-color-scheme: dark) {
+    background: #111;
+  }
+}
+
+.astro-code {
+  padding: 2rem;
+  margin: 3rem 0;
+  background: #222 !important;
+  border-radius: 1rem;
+
+  code {
+    padding: initial;
+    background: initial;
+    border-radius: initial;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    background: #111 !important;
+  }
+}
+
+ul {
+  li {
+    margin: 0.5em;
+  }
+}

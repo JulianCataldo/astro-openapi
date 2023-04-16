@@ -1,0 +1,29 @@
+# DELETE ME (excluded from demo purposes only)
+############
+public/api/*
+openapi.d.ts
+env.d.ts
+#############
+
+#
+
+
+# build output
+dist/
+
+# dependencies
+node_modules/
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+
+# environment variables
+.env
+.env.production
+
+# macOS-specific files
+.DS_Store

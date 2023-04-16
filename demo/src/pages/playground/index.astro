@@ -1,0 +1,46 @@
+---
+import { client } from '@astro-openapi/client/app';
+
+import LayoutDefault from '../../app/LayoutDefault.astro';
+import DataOperations from '../../modules/DataOperations.astro';
+
+// Demo from Server-Side:
+
+const person = await client.findPersonById({ id: 123 });
+---
+
+<LayoutDefault>
+	<div slot="content" class="root">
+		<div>
+			<h2>Client data, from server-side</h2>
+			<pre>{JSON.stringify(person.data,null, 4)}</pre>
+		</div>
+
+		<hr />
+
+		<h2>Client operations, from browser-side</h2>
+
+		<DataOperations />
+	</div>
+</LayoutDefault>
+
+<style lang="scss">
+	.root {
+		padding: 4rem;
+	}
+
+	.examples {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+		padding: 1rem;
+
+		& > * {
+			padding: 1rem;
+
+			& > * {
+				padding: 1rem 0;
+			}
+		}
+	}
+</style>

@@ -1,0 +1,43 @@
+---
+import OpenApiGuiSwagger from '@astro-openapi/gui-swagger/OpenApiGuiSwagger.astro';
+import OpenApiGuiRedoc from '@astro-openapi/gui-redoc/OpenApiGuiRedoc.astro';
+import OpenApiGuiElements from '@astro-openapi/gui-elements/OpenApiGuiElements.astro';
+import { OPENAPI_DEFINITION_URL, SITE_TITLE } from '../../app/constants.js';
+
+const schemaUrl = OPENAPI_DEFINITION_URL;
+
+export function getStaticPaths() {
+	return (
+		[
+			//
+			'elements',
+			'redoc',
+			'swagger',
+		]
+			//
+			.map((gui) => ({
+				params: { gui },
+			}))
+	);
+}
+export const prerender = true;
+
+const { gui } = Astro.params;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>API Reference — {SITE_TITLE}</title>
+	</head>
+
+	<body class={gui}>
+		{gui === 'swagger' && <OpenApiGuiSwagger {schemaUrl} />}
+
+		{gui === 'redoc' && <OpenApiGuiRedoc {schemaUrl} />}
+
+		{gui === 'elements' && <OpenApiGuiElements {schemaUrl} />}
+	</body>
+</html>

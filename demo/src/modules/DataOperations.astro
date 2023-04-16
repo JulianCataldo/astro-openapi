@@ -1,0 +1,93 @@
+---
+import type { OperationMethods } from 'astro-openapi:types';
+import { client } from '@astro-openapi/client/app';
+import { operations } from '../services/index.js';
+
+const scaffold: Record<
+	keyof OperationMethods,
+	{
+		requestBody?: any;
+		params?: any;
+		query?: any;
+		headers?: any;
+		cookies?: any;
+	}
+> = {
+	addPerson: { requestBody: { name: 'Skippy' } },
+	findPersons: { params: { limit: 4 } },
+	deletePerson: { params: { id: 2 } },
+	findPersonById: { params: { id: 5 } },
+} as const;
+
+/* SSR data population */
+async function raw(op: keyof OperationMethods) {
+	const r = await client[op](
+		scaffold[op]?.params || null,
+		scaffold[op]?.requestBody || null,
+	);
+
+	// scaffold[op]?.params, scaffold[op]?.body
+
+	const pretty = JSON.stringify(r.data, null, 2);
+
+	// console.log({ pretty, s: scaffold[op], op });
+	return pretty;
+}
+
+const out = (value: unknown) => JSON.stringify(value, null, 2);
+---
+
+<data-operations>
+	{
+		(Object.keys(operations) as (keyof OperationMethods)[]).map((op) => (
+			<section class="ui form">
+				<div>
+					<button data-operation={op} class="btn btn-primary">
+						{op}
+					</button>
+
+					<textarea
+						class="form-control"
+						data-query
+						set:html={out(scaffold[op])}
+					/>
+				</div>
+				<pre data-display>{raw(op)}</pre>
+				<hr />
+			</section>
+		))
+	}
+</data-operations>
+
+<script>
+	import './DataOperations.client.ts';
+</script>
+
+<style lang="scss">
+	data-operations {
+		width: 30rem;
+		padding: 1rem;
+
+		section {
+			display: flex;
+			align-items: flex-start;
+			height: 26rem;
+		}
+
+		.form textarea {
+			width: 28rem;
+			height: 15rem;
+		}
+
+		div {
+			display: flex;
+			margin-right: 3vw;
+		}
+
+		pre {
+			flex-grow: 1;
+			max-height: 19rem;
+			overflow: scroll;
+		}
+	}
+</style>
