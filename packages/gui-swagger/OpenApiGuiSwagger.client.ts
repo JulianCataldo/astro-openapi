@@ -1,4 +1,6 @@
-import SwaggerUI from 'swagger-ui';
+// FIXME: Not working when packaged
+// import SwaggerUI from 'swagger-ui';
+import { SwaggerUIBundle } from 'swagger-ui-dist';
 
 // @ts-expect-error ...
 import swaggerBaseStyles from 'swagger-ui/dist/swagger-ui.css?url';
@@ -25,7 +27,7 @@ class OpenApiGui extends HTMLElement {
 		shadowClosed.append(stylesDark);
 
 		shadowClosed.append(container);
-		SwaggerUI({ url, domNode: container });
+		SwaggerUIBundle({ url, domNode: container });
 	}
 }
 

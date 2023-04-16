@@ -99,35 +99,33 @@ importers:
   demo:
     specifiers:
       '@apidevtools/swagger-parser': 10.1.0
-      '@astro-openapi/backend': file:/Volumes/n_1024a-Projects/Repositories/packages/astro-openapi/packages/backend/astro-openapi-backend-0.0.1.tgz
-      '@astro-openapi/bundler': file:/Volumes/n_1024a-Projects/Repositories/packages/astro-openapi/packages/bundler/astro-openapi-bundler-0.0.1.tgz
-      '@astro-openapi/client': file:/Volumes/n_1024a-Projects/Repositories/packages/astro-openapi/packages/client/astro-openapi-client-0.0.2.tgz
-      '@astro-openapi/gui-elements': file:/Volumes/n_1024a-Projects/Repositories/packages/astro-openapi/packages/gui-elements/astro-openapi-gui-elements-0.0.2.tgz
-      '@astro-openapi/gui-redoc': file:/Volumes/n_1024a-Projects/Repositories/packages/astro-openapi/packages/gui-redoc/astro-openapi-gui-redoc-0.0.2.tgz
-      '@astro-openapi/gui-swagger': file:/Volumes/n_1024a-Projects/Repositories/packages/astro-openapi/packages/gui-swagger/astro-openapi-gui-swagger-0.0.1.tgz
-      '@astro-openapi/typegen': file:/Volumes/n_1024a-Projects/Repositories/packages/astro-openapi/packages/typegen/astro-openapi-typegen-0.0.1.tgz
+      '@astro-openapi/backend': latest
+      '@astro-openapi/bundler': latest
+      '@astro-openapi/client': latest
+      '@astro-openapi/gui-elements': latest
+      '@astro-openapi/gui-redoc': latest
+      '@astro-openapi/gui-swagger': workspace:gui-swagger
+      '@astro-openapi/typegen': latest
       '@faker-js/faker': 7.6.0
       astro: 2.1.2
       openapi-backend: 5.9.1
       openapi-client-axios: 7.1.3
       openapi-client-axios-typegen: 7.1.3
-      react: ^17
       vite-plugin-top-level-await: ^1.3.0
     dependencies:
       '@apidevtools/swagger-parser': 10.1.0
-      '@astro-openapi/backend': file:packages/backend/astro-openapi-backend-0.0.1.tgz_4otp2jzgmjp4x7xmrwlykhut6m
-      '@astro-openapi/bundler': file:packages/bundler/astro-openapi-bundler-0.0.1.tgz_mc77lqfcxzdh6cmfps7camscxi
-      '@astro-openapi/client': file:packages/client/astro-openapi-client-0.0.2.tgz_wiufrgfvszabtv4isdqexea6yy
-      '@astro-openapi/gui-elements': file:packages/gui-elements/astro-openapi-gui-elements-0.0.2.tgz_react@17.0.2
-      '@astro-openapi/gui-redoc': file:packages/gui-redoc/astro-openapi-gui-redoc-0.0.2.tgz_react@17.0.2
-      '@astro-openapi/gui-swagger': file:packages/gui-swagger/astro-openapi-gui-swagger-0.0.1.tgz
-      '@astro-openapi/typegen': file:packages/typegen/astro-openapi-typegen-0.0.1.tgz_vb5oxmff3hg6k2qkursabaw3ri
+      '@astro-openapi/backend': 0.0.2_4otp2jzgmjp4x7xmrwlykhut6m
+      '@astro-openapi/bundler': 0.0.2_mc77lqfcxzdh6cmfps7camscxi
+      '@astro-openapi/client': 0.0.2_wiufrgfvszabtv4isdqexea6yy
+      '@astro-openapi/gui-elements': 0.0.2
+      '@astro-openapi/gui-redoc': 0.0.2
+      '@astro-openapi/gui-swagger': link:../packages/gui-swagger
+      '@astro-openapi/typegen': 0.0.2_vb5oxmff3hg6k2qkursabaw3ri
       '@faker-js/faker': 7.6.0
       astro: 2.1.2
       openapi-backend: 5.9.1
       openapi-client-axios: 7.1.3
       openapi-client-axios-typegen: 7.1.3
-      react: 17.0.2
       vite-plugin-top-level-await: 1.3.0
 
   packages/backend:
@@ -204,13 +202,17 @@ importers:
   packages/gui-swagger:
     specifiers:
       '@types/swagger-ui': ^3.52.0
+      '@types/swagger-ui-dist': ^3.30.1
       astro: ^2.1.2
-      swagger-ui: ^4.18.1
+      swagger-ui: ^4.18.2
+      swagger-ui-dist: ^4.18.2
       typescript: ^5.0.2
     dependencies:
       swagger-ui: 4.18.2
+      swagger-ui-dist: 4.18.2
     devDependencies:
       '@types/swagger-ui': 3.52.0
+      '@types/swagger-ui-dist': 3.30.1
       astro: 2.3.0
       typescript: 5.0.4
 
@@ -359,6 +361,105 @@ packages:
       ajv: 8.12.0
       ajv-draft-04: 1.0.0_ajv@8.12.0
       call-me-maybe: 1.0.2
+    dev: false
+
+  /@astro-openapi/backend/0.0.2_4otp2jzgmjp4x7xmrwlykhut6m:
+    resolution:
+      {
+        integrity: sha512-kJtOyZgoZmuCHoBUkP/SOy0U3P9E/Cm2OOFGpdpevuHQPosp3pdpYtHm5SlRMKiUqoMw4cp+rySGgVFT7a+PQg==,
+      }
+    peerDependencies:
+      openapi-backend: ^5.9.1
+      vite-plugin-top-level-await: ^1.3.0
+    dependencies:
+      openapi-backend: 5.9.1
+      vite-plugin-top-level-await: 1.3.0
+    dev: false
+
+  /@astro-openapi/bundler/0.0.2_mc77lqfcxzdh6cmfps7camscxi:
+    resolution:
+      {
+        integrity: sha512-LlyYh7rsMvu1psM29udZo7aDjFNsuRzwERKI3V0bz2hxk2AHQ1db3W443YnmRz5ShzcfZH866RitmeEEmo6rkQ==,
+      }
+    peerDependencies:
+      '@apidevtools/swagger-parser': ^10.1.0
+    dependencies:
+      '@apidevtools/swagger-parser': 10.1.0
+    dev: false
+
+  /@astro-openapi/client/0.0.2_wiufrgfvszabtv4isdqexea6yy:
+    resolution:
+      {
+        integrity: sha512-FkEp0zqsJZC1k0czMr9BfmLunEw7j+LUc8Xi4ScChv/O1EW+ya6lgTE45JhoAom0Qrm9kM1Er4DLrYxpX84cTw==,
+      }
+    peerDependencies:
+      openapi-client-axios: ^7.1.3
+      vite-plugin-top-level-await: ^1.3.0
+    dependencies:
+      openapi-client-axios: 7.1.3
+      vite-plugin-top-level-await: 1.3.0
+    dev: false
+
+  /@astro-openapi/gui-elements/0.0.2:
+    resolution:
+      {
+        integrity: sha512-nPY0F4Swl9szhjDEViG5ImGjLU0zwMaNto6+cRUM66elAooSFrY8HSb/YEv5POVUiJnDiJ6UYfX4eoZnu5pXXA==,
+      }
+    dependencies:
+      '@stoplight/elements': 7.7.15
+    transitivePeerDependencies:
+      - '@babel/core'
+      - '@babel/template'
+      - '@urql/core'
+      - encoding
+      - immer
+      - jotai-devtools
+      - jotai-immer
+      - jotai-optics
+      - jotai-redux
+      - jotai-tanstack-query
+      - jotai-urql
+      - jotai-valtio
+      - jotai-xstate
+      - jotai-zustand
+      - optics-ts
+      - react
+      - react-dom
+      - react-native
+      - supports-color
+      - valtio
+      - wonka
+      - xstate
+    dev: false
+
+  /@astro-openapi/gui-redoc/0.0.2:
+    resolution:
+      {
+        integrity: sha512-qi7AamJelDga2tQ/RmUWIAMJkOs6PNmZ3pI90he20vJ0pLcB9smu9h58/lGUpJMeAVD/eYSSxeRmvsBBSvEswg==,
+      }
+    dependencies:
+      redoc: 2.0.0
+    transitivePeerDependencies:
+      - core-js
+      - encoding
+      - mobx
+      - react
+      - react-dom
+      - react-native
+      - styled-components
+      - webpack
+    dev: false
+
+  /@astro-openapi/typegen/0.0.2_vb5oxmff3hg6k2qkursabaw3ri:
+    resolution:
+      {
+        integrity: sha512-za0JWxY/aVqkVdM+Jhh3qXcouYY2AIHU2ndaAazm4BipPlTZhBQ7stxenXdcxYsk9JllWRA78RMXBwaLcopvjg==,
+      }
+    peerDependencies:
+      openapi-client-axios-typegen: ^7.1.3
+    dependencies:
+      openapi-client-axios-typegen: 7.1.3
+      prettier: 2.8.7
     dev: false
 
   /@astrojs/compiler/0.31.4:
@@ -1835,20 +1936,6 @@ packages:
       prop-types: 15.8.1
     dev: false
 
-  /@fortawesome/react-fontawesome/0.2.0_zute3adenybwwon4zpn6czkvnu:
-    resolution:
-      {
-        integrity: sha512-uHg75Rb/XORTtVt7OS9WoK8uM276Ufi7gCzshVWkUJbHhh3svsUUeqXerrM96Wm7fRiDzfKRwSoahhMIkGAYHw==,
-      }
-    peerDependencies:
-      '@fortawesome/fontawesome-svg-core': ~1 || ~6
-      react: '>=16.3'
-    dependencies:
-      '@fortawesome/fontawesome-svg-core': 6.4.0
-      prop-types: 15.8.1
-      react: 17.0.2
-    dev: false
-
   /@humanwhocodes/config-array/0.11.8:
     resolution:
       {
@@ -2117,18 +2204,6 @@ packages:
       '@react-hook/latest': 1.0.3
     dev: false
 
-  /@react-hook/debounce/3.0.0_react@17.0.2:
-    resolution:
-      {
-        integrity: sha512-ir/kPrSfAzY12Gre0sOHkZ2rkEmM4fS5M5zFxCi4BnCeXh2nvx9Ujd+U4IGpKCuPA+EQD0pg1eK2NGLvfWejag==,
-      }
-    peerDependencies:
-      react: '>=16.8'
-    dependencies:
-      '@react-hook/latest': 1.0.3_react@17.0.2
-      react: 17.0.2
-    dev: false
-
   /@react-hook/event/1.2.6:
     resolution:
       {
@@ -2136,17 +2211,6 @@ packages:
       }
     peerDependencies:
       react: '>=16.8'
-    dev: false
-
-  /@react-hook/event/1.2.6_react@17.0.2:
-    resolution:
-      {
-        integrity: sha512-JUL5IluaOdn5w5Afpe/puPa1rj8X6udMlQ9dt4hvMuKmTrBS1Ya6sb4sVgvfe2eU4yDuOfAhik8xhbcCekbg9Q==,
-      }
-    peerDependencies:
-      react: '>=16.8'
-    dependencies:
-      react: 17.0.2
     dev: false
 
   /@react-hook/latest/1.0.3:
@@ -2158,17 +2222,6 @@ packages:
       react: '>=16.8'
     dev: false
 
-  /@react-hook/latest/1.0.3_react@17.0.2:
-    resolution:
-      {
-        integrity: sha512-dy6duzl+JnAZcDbNTfmaP3xHiKtbXYOaz3G51MGVljh548Y8MWzTr+PHLOfvpypEVW9zwvl+VyKjbWKEVbV1Rg==,
-      }
-    peerDependencies:
-      react: '>=16.8'
-    dependencies:
-      react: 17.0.2
-    dev: false
-
   /@react-hook/passive-layout-effect/1.2.1:
     resolution:
       {
@@ -2176,17 +2229,6 @@ packages:
       }
     peerDependencies:
       react: '>=16.8'
-    dev: false
-
-  /@react-hook/passive-layout-effect/1.2.1_react@17.0.2:
-    resolution:
-      {
-        integrity: sha512-IwEphTD75liO8g+6taS+4oqz+nnroocNfWVHWz7j+N+ZO2vYrc6PV1q7GQhuahL0IOR7JccFTsFKQ/mb6iZWAg==,
-      }
-    peerDependencies:
-      react: '>=16.8'
-    dependencies:
-      react: 17.0.2
     dev: false
 
   /@react-hook/resize-observer/1.2.6:
@@ -2202,20 +2244,6 @@ packages:
       '@react-hook/passive-layout-effect': 1.2.1
     dev: false
 
-  /@react-hook/resize-observer/1.2.6_react@17.0.2:
-    resolution:
-      {
-        integrity: sha512-DlBXtLSW0DqYYTW3Ft1/GQFZlTdKY5VAFIC4+km6IK5NiPPDFchGbEJm1j6pSgMqPRHbUQgHJX7RaR76ic1LWA==,
-      }
-    peerDependencies:
-      react: '>=16.8'
-    dependencies:
-      '@juggle/resize-observer': 3.4.0
-      '@react-hook/latest': 1.0.3_react@17.0.2
-      '@react-hook/passive-layout-effect': 1.2.1_react@17.0.2
-      react: 17.0.2
-    dev: false
-
   /@react-hook/size/2.1.2:
     resolution:
       {
@@ -2228,19 +2256,6 @@ packages:
       '@react-hook/resize-observer': 1.2.6
     dev: false
 
-  /@react-hook/size/2.1.2_react@17.0.2:
-    resolution:
-      {
-        integrity: sha512-BmE5asyRDxSuQ9p14FUKJ0iBRgV9cROjqNG9jT/EjCM+xHha1HVqbPoT+14FQg1K7xIydabClCibUY4+1tw/iw==,
-      }
-    peerDependencies:
-      react: '>=16.8'
-    dependencies:
-      '@react-hook/passive-layout-effect': 1.2.1_react@17.0.2
-      '@react-hook/resize-observer': 1.2.6_react@17.0.2
-      react: 17.0.2
-    dev: false
-
   /@react-hook/throttle/2.2.0:
     resolution:
       {
@@ -2250,18 +2265,6 @@ packages:
       react: '>=16.8'
     dependencies:
       '@react-hook/latest': 1.0.3
-    dev: false
-
-  /@react-hook/throttle/2.2.0_react@17.0.2:
-    resolution:
-      {
-        integrity: sha512-LJ5eg+yMV8lXtqK3lR+OtOZ2WH/EfWvuiEEu0M3bhR7dZRfTyEJKxH1oK9uyBxiXPtWXiQggWbZirMCXam51tg==,
-      }
-    peerDependencies:
-      react: '>=16.8'
-    dependencies:
-      '@react-hook/latest': 1.0.3_react@17.0.2
-      react: 17.0.2
     dev: false
 
   /@react-hook/window-size/3.1.1:
@@ -2277,20 +2280,6 @@ packages:
       '@react-hook/throttle': 2.2.0
     dev: false
 
-  /@react-hook/window-size/3.1.1_react@17.0.2:
-    resolution:
-      {
-        integrity: sha512-yWnVS5LKnOUIrEsI44oz3bIIUYqflamPL27n+k/PC//PsX/YeWBky09oPeAoc9As6jSH16Wgo8plI+ECZaHk3g==,
-      }
-    peerDependencies:
-      react: '>=16.8'
-    dependencies:
-      '@react-hook/debounce': 3.0.0_react@17.0.2
-      '@react-hook/event': 1.2.6_react@17.0.2
-      '@react-hook/throttle': 2.2.0_react@17.0.2
-      react: 17.0.2
-    dev: false
-
   /@react-types/button/3.4.1:
     resolution:
       {
@@ -2300,18 +2289,6 @@ packages:
       react: ^16.8.0 || ^17.0.0-rc.1
     dependencies:
       '@react-types/shared': 3.18.0
-    dev: false
-
-  /@react-types/button/3.4.1_react@17.0.2:
-    resolution:
-      {
-        integrity: sha512-B54M84LxdEppwjXNlkBEJyMfe9fd+bvFV7R6+NJvupGrZm/LuFNYjFcHk7yjMKWTdWm6DbpIuQz54n5qTW7Vlg==,
-      }
-    peerDependencies:
-      react: ^16.8.0 || ^17.0.0-rc.1
-    dependencies:
-      '@react-types/shared': 3.18.0_react@17.0.2
-      react: 17.0.2
     dev: false
 
   /@react-types/checkbox/3.4.3:
@@ -2325,18 +2302,6 @@ packages:
       '@react-types/shared': 3.18.0
     dev: false
 
-  /@react-types/checkbox/3.4.3_react@17.0.2:
-    resolution:
-      {
-        integrity: sha512-kn2f8mK88yvRrCfh8jYCDL2xpPhSApFWk9+qjWGsX/bnGGob7D5n71YYQ4cS58117YK2nrLc/AyQJXcZnJiA7Q==,
-      }
-    peerDependencies:
-      react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0
-    dependencies:
-      '@react-types/shared': 3.18.0_react@17.0.2
-      react: 17.0.2
-    dev: false
-
   /@react-types/radio/3.1.2:
     resolution:
       {
@@ -2348,18 +2313,6 @@ packages:
       '@react-types/shared': 3.18.0
     dev: false
 
-  /@react-types/radio/3.1.2_react@17.0.2:
-    resolution:
-      {
-        integrity: sha512-vkIic8abrVUyl/YjKU3yTVwn8QgebzuadfV89PsaKc3hdmSiHhDsln5wYsfWOEotqMwPrG1aEv9yRMYO78OQXQ==,
-      }
-    peerDependencies:
-      react: ^16.8.0 || ^17.0.0-rc.1
-    dependencies:
-      '@react-types/shared': 3.18.0_react@17.0.2
-      react: 17.0.2
-    dev: false
-
   /@react-types/shared/3.18.0:
     resolution:
       {
@@ -2369,17 +2322,6 @@ packages:
       react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0
     dev: false
 
-  /@react-types/shared/3.18.0_react@17.0.2:
-    resolution:
-      {
-        integrity: sha512-WJj7RAPj7NLdR/VzFObgvCju9NMDktWSruSPJ3DrL5qyrrvJoyMW67L4YjNoVp2b7Y+k10E0q4fSMV0PlJoL0w==,
-      }
-    peerDependencies:
-      react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0
-    dependencies:
-      react: 17.0.2
-    dev: false
-
   /@react-types/shared/3.9.0:
     resolution:
       {
@@ -2387,17 +2329,6 @@ packages:
       }
     peerDependencies:
       react: ^16.8.0 || ^17.0.0-rc.1
-    dev: false
-
-  /@react-types/shared/3.9.0_react@17.0.2:
-    resolution:
-      {
-        integrity: sha512-YYksINfR6q92P10AhPEGo47Hd7oz1hrnZ6Vx8Gsrq62IbqDdv1XOTzPBaj17Z1ymNY2pitLUSEXsLmozt4wxxQ==,
-      }
-    peerDependencies:
-      react: ^16.8.0 || ^17.0.0-rc.1
-    dependencies:
-      react: 17.0.2
     dev: false
 
   /@react-types/switch/3.1.2:
@@ -2412,19 +2343,6 @@ packages:
       '@react-types/shared': 3.18.0
     dev: false
 
-  /@react-types/switch/3.1.2_react@17.0.2:
-    resolution:
-      {
-        integrity: sha512-EaYWoLvUCpOnt//Ov8VBxOjbs4hBpYE/rBAzzIknXaFvKOu867iZBFL7FJbcemOgC8/dwyaj6GUZ1Gw3Z1g59w==,
-      }
-    peerDependencies:
-      react: ^16.8.0 || ^17.0.0-rc.1
-    dependencies:
-      '@react-types/checkbox': 3.4.3_react@17.0.2
-      '@react-types/shared': 3.18.0_react@17.0.2
-      react: 17.0.2
-    dev: false
-
   /@react-types/textfield/3.3.0:
     resolution:
       {
@@ -2434,18 +2352,6 @@ packages:
       react: ^16.8.0 || ^17.0.0-rc.1
     dependencies:
       '@react-types/shared': 3.18.0
-    dev: false
-
-  /@react-types/textfield/3.3.0_react@17.0.2:
-    resolution:
-      {
-        integrity: sha512-lOf0tx3c3dVaomH/uvKpOKFVTXQ232kLnMhOJTtj97JDX7fTr3SNhDUV0G8Zf4M0vr+l+xkTrJkywYE23rzliw==,
-      }
-    peerDependencies:
-      react: ^16.8.0 || ^17.0.0-rc.1
-    dependencies:
-      '@react-types/shared': 3.18.0_react@17.0.2
-      react: 17.0.2
     dev: false
 
   /@redocly/ajv/8.11.0:
@@ -2488,17 +2394,6 @@ packages:
       }
     peerDependencies:
       react: '>=16.8.0'
-    dev: false
-
-  /@rehooks/component-size/1.0.3_react@17.0.2:
-    resolution:
-      {
-        integrity: sha512-pnYld+8SSF2vXwdLOqBGUyOrv/SjzwLjIUcs/4c1JJgR0q4E9eBtBfuZMD6zUD51fvSehSsbnlQMzotSmPTXPg==,
-      }
-    peerDependencies:
-      react: '>=16.8.0'
-    dependencies:
-      react: 17.0.2
     dev: false
 
   /@rollup/plugin-virtual/3.0.1:
@@ -2582,24 +2477,6 @@ packages:
       tslib: 1.14.1
     dev: false
 
-  /@sentry/react/6.19.7_react@17.0.2:
-    resolution:
-      {
-        integrity: sha512-VzJeBg/v41jfxUYPkH2WYrKjWc4YiMLzDX0f4Zf6WkJ4v3IlDDSkX6DfmWekjTKBho6wiMkSNy2hJ1dHfGZ9jA==,
-      }
-    engines: { node: '>=6' }
-    peerDependencies:
-      react: 15.x || 16.x || 17.x || 18.x
-    dependencies:
-      '@sentry/browser': 6.19.7
-      '@sentry/minimal': 6.19.7
-      '@sentry/types': 6.19.7
-      '@sentry/utils': 6.19.7
-      hoist-non-react-statics: 3.3.2
-      react: 17.0.2
-      tslib: 1.14.1
-    dev: false
-
   /@sentry/types/6.19.7:
     resolution:
       {
@@ -2679,67 +2556,6 @@ packages:
       - xstate
     dev: false
 
-  /@stoplight/elements-core/7.7.15_react@17.0.2:
-    resolution:
-      {
-        integrity: sha512-9ACyiXYMuH8rPMetrSPe1oLFoiHL6lIusSb6ILPBMuWL+d9uJRE5Y8oul0rxbDVYiTv2O7Wlbt40HAQWziiD8Q==,
-      }
-    engines: { node: '>=14.13' }
-    peerDependencies:
-      react: '>=16.8'
-      react-dom: '>=16.8'
-    dependencies:
-      '@stoplight/http-spec': 5.6.2
-      '@stoplight/json': 3.20.2
-      '@stoplight/json-schema-ref-parser': 9.2.2
-      '@stoplight/json-schema-sampler': 0.2.3
-      '@stoplight/json-schema-viewer': 4.9.0_gbmn4dbmluenrwpmhcekvjxowa
-      '@stoplight/markdown-viewer': 5.6.0_s2k6l3x32doxiumcz4osfw7zwu
-      '@stoplight/mosaic': 1.40.0_react@17.0.2
-      '@stoplight/mosaic-code-editor': 1.40.0_react@17.0.2
-      '@stoplight/mosaic-code-viewer': 1.40.0_react@17.0.2
-      '@stoplight/path': 1.3.2
-      '@stoplight/react-error-boundary': 2.0.0_react@17.0.2
-      '@stoplight/types': 13.11.0
-      '@stoplight/yaml': 4.2.3
-      classnames: 2.3.2
-      httpsnippet-lite: 3.0.5
-      jotai: 1.3.9_w5vwkzb2jgqn3ig6g4lntukybu
-      json-schema: 0.4.0
-      lodash: 4.17.21
-      nanoid: 3.3.6
-      prop-types: 15.8.1
-      react: 17.0.2
-      react-query: 3.39.3_react@17.0.2
-      react-router-dom: 5.3.4_react@17.0.2
-      react-router-hash-link: 2.4.3_nbt3wh3qkdiqet3j3quwfqco4i
-      tslib: 2.5.0
-      urijs: 1.19.11
-      util: 0.12.5
-      xml-formatter: 2.6.1
-    transitivePeerDependencies:
-      - '@babel/core'
-      - '@babel/template'
-      - '@urql/core'
-      - encoding
-      - immer
-      - jotai-devtools
-      - jotai-immer
-      - jotai-optics
-      - jotai-redux
-      - jotai-tanstack-query
-      - jotai-urql
-      - jotai-valtio
-      - jotai-xstate
-      - jotai-zustand
-      - optics-ts
-      - react-native
-      - supports-color
-      - valtio
-      - wonka
-      - xstate
-    dev: false
-
   /@stoplight/elements/7.7.15:
     resolution:
       {
@@ -2761,51 +2577,6 @@ packages:
       lodash: 4.17.21
       react-query: 3.39.3
       react-router-dom: 5.3.4
-    transitivePeerDependencies:
-      - '@babel/core'
-      - '@babel/template'
-      - '@urql/core'
-      - encoding
-      - immer
-      - jotai-devtools
-      - jotai-immer
-      - jotai-optics
-      - jotai-redux
-      - jotai-tanstack-query
-      - jotai-urql
-      - jotai-valtio
-      - jotai-xstate
-      - jotai-zustand
-      - optics-ts
-      - react-native
-      - supports-color
-      - valtio
-      - wonka
-      - xstate
-    dev: false
-
-  /@stoplight/elements/7.7.15_react@17.0.2:
-    resolution:
-      {
-        integrity: sha512-uRg3E54hqbwIONOkI6LESgKCYfwKMxWl6zwy61mEF6pProUTww/QAmlL5ICWpAFejqfu9ebbrP1G956JRDqAVA==,
-      }
-    engines: { node: '>=14.13' }
-    peerDependencies:
-      react: '>=16.8'
-      react-dom: '>=16.8'
-    dependencies:
-      '@stoplight/elements-core': 7.7.15_react@17.0.2
-      '@stoplight/http-spec': 5.6.2
-      '@stoplight/json': 3.20.2
-      '@stoplight/mosaic': 1.40.0_react@17.0.2
-      '@stoplight/types': 13.11.0
-      '@stoplight/yaml': 4.2.3
-      classnames: 2.3.2
-      file-saver: 2.0.5
-      lodash: 4.17.21
-      react: 17.0.2
-      react-query: 3.39.3_react@17.0.2
-      react-router-dom: 5.3.4_react@17.0.2
     transitivePeerDependencies:
       - '@babel/core'
       - '@babel/template'
@@ -2922,45 +2693,6 @@ packages:
       magic-error: 0.0.1
     dev: false
 
-  /@stoplight/json-schema-viewer/4.9.0_gbmn4dbmluenrwpmhcekvjxowa:
-    resolution:
-      {
-        integrity: sha512-xuOt1FFeFxiy/bJrD0++9rjKY0NlaxH7y6jDZGCMGmH0y2vykpC2ZbHji+ol7/rB5TvVp7oE0NwlpK8TVizinw==,
-      }
-    engines: { node: '>=16' }
-    peerDependencies:
-      '@stoplight/markdown-viewer': ^5
-      '@stoplight/mosaic': ^1.32
-      '@stoplight/mosaic-code-viewer': ^1.32
-      react: '>=16.8'
-      react-dom: '>=16.8'
-    dependencies:
-      '@stoplight/json': 3.20.2
-      '@stoplight/json-schema-tree': 2.2.2
-      '@stoplight/markdown-viewer': 5.6.0_s2k6l3x32doxiumcz4osfw7zwu
-      '@stoplight/mosaic': 1.40.0_react@17.0.2
-      '@stoplight/mosaic-code-viewer': 1.40.0_react@17.0.2
-      '@stoplight/react-error-boundary': 2.0.0_react@17.0.2
-      '@types/json-schema': 7.0.11
-      classnames: 2.3.2
-      fnv-plus: 1.3.1
-      jotai: 1.13.1_react@17.0.2
-      lodash: 4.17.21
-      react: 17.0.2
-    transitivePeerDependencies:
-      - '@babel/core'
-      - '@babel/template'
-      - jotai-devtools
-      - jotai-immer
-      - jotai-optics
-      - jotai-redux
-      - jotai-tanstack-query
-      - jotai-urql
-      - jotai-valtio
-      - jotai-xstate
-      - jotai-zustand
-    dev: false
-
   /@stoplight/json-schema-viewer/4.9.0_l4dlkpaeysxzw64qewpdcbtcpq:
     resolution:
       {
@@ -3023,39 +2755,6 @@ packages:
     dependencies:
       tslib: 2.5.0
       wolfy87-eventemitter: 5.2.9
-    dev: false
-
-  /@stoplight/markdown-viewer/5.6.0_s2k6l3x32doxiumcz4osfw7zwu:
-    resolution:
-      {
-        integrity: sha512-vKHn1Bv9nafBYQWtNLlrRZ1aKqFRTOdfWUAhCSV1ZH4iqxGa+O1OWWTBbeOF5du8vcrWu1tTrXoCXkZjmq1NlA==,
-      }
-    engines: { node: '>=12' }
-    peerDependencies:
-      '@stoplight/mosaic': ^1.24.4
-      '@stoplight/mosaic-code-viewer': ^1.24.4
-      react: '>=16.14'
-      react-dom: '>=16.14'
-    dependencies:
-      '@rehooks/component-size': 1.0.3_react@17.0.2
-      '@stoplight/markdown': 3.2.0
-      '@stoplight/mosaic': 1.40.0_react@17.0.2
-      '@stoplight/mosaic-code-viewer': 1.40.0_react@17.0.2
-      '@stoplight/react-error-boundary': 2.0.0_react@17.0.2
-      deepmerge: 4.3.1
-      hast-to-hyperscript: 10.0.3
-      hast-util-raw: 7.0.0
-      hast-util-sanitize: 4.1.0
-      hastscript: 7.2.0
-      mdast-util-to-hast: 11.3.0
-      react: 17.0.2
-      remark-parse: 9.0.0
-      unified: 9.2.2
-      unist-builder: 3.0.1
-      unist-util-select: 4.0.3
-      unist-util-visit: 3.1.0
-    transitivePeerDependencies:
-      - supports-color
     dev: false
 
   /@stoplight/markdown-viewer/5.6.0_sadmrbsjila5slmzmh3kwtnjem:
@@ -3151,43 +2850,6 @@ packages:
       - react-dom
     dev: false
 
-  /@stoplight/mosaic-code-editor/1.40.0_react@17.0.2:
-    resolution:
-      {
-        integrity: sha512-KU9Qj+JeXA6V4PtqJa8nV6W5scml92Bvbwc+//zd13MR5iUbbEKux9kzwtB1OJxvgSRsDI/5oP5yq1RzPLLQuw==,
-      }
-    peerDependencies:
-      react: '>= 16.14'
-    dependencies:
-      '@fortawesome/fontawesome-svg-core': 6.4.0
-      '@fortawesome/react-fontawesome': 0.2.0_zute3adenybwwon4zpn6czkvnu
-      '@react-hook/size': 2.1.2_react@17.0.2
-      '@react-hook/window-size': 3.1.1_react@17.0.2
-      '@react-types/radio': 3.1.2_react@17.0.2
-      '@react-types/shared': 3.9.0_react@17.0.2
-      '@react-types/switch': 3.1.2_react@17.0.2
-      '@stoplight/mosaic': 1.40.0_react@17.0.2
-      '@stoplight/mosaic-code-viewer': 1.40.0_react@17.0.2
-      '@stoplight/types': 13.11.0
-      clsx: 1.2.1
-      copy-to-clipboard: 3.3.3
-      dom-helpers: 3.4.0
-      lodash.get: 4.4.2
-      nano-memoize: 1.3.1
-      polished: 4.2.2
-      prism-react-renderer: 1.3.5_react@17.0.2
-      prismjs: 1.29.0
-      react: 17.0.2
-      react-fast-compare: 3.2.1
-      react-overflow-list: 0.5.0_react@17.0.2
-      ts-keycode-enum: 1.0.6
-      tslib: 2.5.0
-      use-resize-observer: 9.1.0_react@17.0.2
-      zustand: 3.7.2_react@17.0.2
-    transitivePeerDependencies:
-      - react-dom
-    dev: false
-
   /@stoplight/mosaic-code-viewer/1.40.0:
     resolution:
       {
@@ -3219,42 +2881,6 @@ packages:
       tslib: 2.5.0
       use-resize-observer: 9.1.0
       zustand: 3.7.2
-    transitivePeerDependencies:
-      - react-dom
-    dev: false
-
-  /@stoplight/mosaic-code-viewer/1.40.0_react@17.0.2:
-    resolution:
-      {
-        integrity: sha512-beseNsIl3MT868HXgLDB1GNExiOpBwNPJttrOOceR3SXv1Xa/oTEVh2ADhgiW010uWuwYLq9QMllEeXJg/YX/Q==,
-      }
-    peerDependencies:
-      react: '>= 16.14'
-    dependencies:
-      '@fortawesome/fontawesome-svg-core': 6.4.0
-      '@fortawesome/react-fontawesome': 0.2.0_zute3adenybwwon4zpn6czkvnu
-      '@react-hook/size': 2.1.2_react@17.0.2
-      '@react-hook/window-size': 3.1.1_react@17.0.2
-      '@react-types/radio': 3.1.2_react@17.0.2
-      '@react-types/shared': 3.9.0_react@17.0.2
-      '@react-types/switch': 3.1.2_react@17.0.2
-      '@stoplight/mosaic': 1.40.0_react@17.0.2
-      '@stoplight/types': 13.11.0
-      clsx: 1.2.1
-      copy-to-clipboard: 3.3.3
-      dom-helpers: 3.4.0
-      lodash.get: 4.4.2
-      nano-memoize: 1.3.1
-      polished: 4.2.2
-      prism-react-renderer: 1.3.5_react@17.0.2
-      prismjs: 1.29.0
-      react: 17.0.2
-      react-fast-compare: 3.2.1
-      react-overflow-list: 0.5.0_react@17.0.2
-      ts-keycode-enum: 1.0.6
-      tslib: 2.5.0
-      use-resize-observer: 9.1.0_react@17.0.2
-      zustand: 3.7.2_react@17.0.2
     transitivePeerDependencies:
       - react-dom
     dev: false
@@ -3295,43 +2921,6 @@ packages:
       - react-dom
     dev: false
 
-  /@stoplight/mosaic/1.40.0_react@17.0.2:
-    resolution:
-      {
-        integrity: sha512-hHEb0Cc4TzaPRjt9h5Ll7FuuVedvW6ZPa5HIxIMhPj4jgy5G3AaC1CCXzdRlwicBkUIp6lNkBOpB7cHadpXp1w==,
-      }
-    peerDependencies:
-      react: '>= 16.14'
-    dependencies:
-      '@fortawesome/fontawesome-svg-core': 6.4.0
-      '@fortawesome/react-fontawesome': 0.2.0_zute3adenybwwon4zpn6czkvnu
-      '@react-hook/size': 2.1.2_react@17.0.2
-      '@react-hook/window-size': 3.1.1_react@17.0.2
-      '@react-types/button': 3.4.1_react@17.0.2
-      '@react-types/radio': 3.1.2_react@17.0.2
-      '@react-types/shared': 3.9.0_react@17.0.2
-      '@react-types/switch': 3.1.2_react@17.0.2
-      '@react-types/textfield': 3.3.0_react@17.0.2
-      '@stoplight/types': 13.11.0
-      '@types/react': 17.0.58
-      '@types/react-dom': 17.0.19
-      clsx: 1.2.1
-      copy-to-clipboard: 3.3.3
-      dom-helpers: 3.4.0
-      lodash.get: 4.4.2
-      nano-memoize: 1.3.1
-      polished: 4.2.2
-      react: 17.0.2
-      react-fast-compare: 3.2.1
-      react-overflow-list: 0.5.0_react@17.0.2
-      ts-keycode-enum: 1.0.6
-      tslib: 2.5.0
-      use-resize-observer: 9.1.0_react@17.0.2
-      zustand: 3.7.2_react@17.0.2
-    transitivePeerDependencies:
-      - react-dom
-    dev: false
-
   /@stoplight/ordered-object-literal/1.0.4:
     resolution:
       {
@@ -3359,20 +2948,6 @@ packages:
       react-dom: '>=16.8'
     dependencies:
       '@sentry/react': 6.19.7
-    dev: false
-
-  /@stoplight/react-error-boundary/2.0.0_react@17.0.2:
-    resolution:
-      {
-        integrity: sha512-r9cyaaH2h0kFe5c0aP+yJuY9CyXgfbBaMO6660M/wRQXqM49K5Ul7kexE4ei2cqYgo+Cd6ALl6RXSZFYwf2kCA==,
-      }
-    engines: { node: '>=10' }
-    peerDependencies:
-      react: '>=16.8'
-      react-dom: '>=16.8'
-    dependencies:
-      '@sentry/react': 6.19.7_react@17.0.2
-      react: 17.0.2
     dev: false
 
   /@stoplight/types/12.5.0:
@@ -4273,6 +3848,13 @@ packages:
         integrity: sha512-7yQiX6MWSFSvc/1wW5smJMZTZ4fHOd+hqLr3qr/HONDxHEa2bnYAsOcGBOEqFIjd4yetwMOdEDdeW+udRAQnHA==,
       }
     dev: false
+
+  /@types/swagger-ui-dist/3.30.1:
+    resolution:
+      {
+        integrity: sha512-wWojDensMF33dSrhak4iWSPOsWBbvf+rSJ6VWQ7ohQbGdKAiT2IwUexrDZkMvf3+vVAPVnNFDRDtxADFszbh+Q==,
+      }
+    dev: true
 
   /@types/swagger-ui/3.52.0:
     resolution:
@@ -9747,52 +9329,6 @@ packages:
         optional: true
     dev: false
 
-  /jotai/1.13.1_react@17.0.2:
-    resolution:
-      {
-        integrity: sha512-RUmH1S4vLsG3V6fbGlKzGJnLrDcC/HNb5gH2AeA9DzuJknoVxSGvvg8OBB7lke+gDc4oXmdVsaKn/xDUhWZ0vw==,
-      }
-    engines: { node: '>=12.20.0' }
-    peerDependencies:
-      '@babel/core': '*'
-      '@babel/template': '*'
-      jotai-devtools: '*'
-      jotai-immer: '*'
-      jotai-optics: '*'
-      jotai-redux: '*'
-      jotai-tanstack-query: '*'
-      jotai-urql: '*'
-      jotai-valtio: '*'
-      jotai-xstate: '*'
-      jotai-zustand: '*'
-      react: '>=16.8'
-    peerDependenciesMeta:
-      '@babel/core':
-        optional: true
-      '@babel/template':
-        optional: true
-      jotai-devtools:
-        optional: true
-      jotai-immer:
-        optional: true
-      jotai-optics:
-        optional: true
-      jotai-redux:
-        optional: true
-      jotai-tanstack-query:
-        optional: true
-      jotai-urql:
-        optional: true
-      jotai-valtio:
-        optional: true
-      jotai-xstate:
-        optional: true
-      jotai-zustand:
-        optional: true
-    dependencies:
-      react: 17.0.2
-    dev: false
-
   /jotai/1.3.9_react-query@3.39.3:
     resolution:
       {
@@ -9831,47 +9367,6 @@ packages:
         optional: true
     dependencies:
       react-query: 3.39.3
-    dev: false
-
-  /jotai/1.3.9_w5vwkzb2jgqn3ig6g4lntukybu:
-    resolution:
-      {
-        integrity: sha512-b6DvH9gf+7TfjaboCO54g+C0yhaakIaUBtjLf0dk1p15FWCzNw/93sezdXy9cCaZ8qcEdMLJcjBwQlORmIq29g==,
-      }
-    engines: { node: '>=12.7.0' }
-    peerDependencies:
-      '@babel/core': '*'
-      '@babel/template': '*'
-      '@urql/core': '*'
-      immer: '*'
-      optics-ts: '*'
-      react: '>=16.8'
-      react-query: '*'
-      valtio: '*'
-      wonka: '*'
-      xstate: '*'
-    peerDependenciesMeta:
-      '@babel/core':
-        optional: true
-      '@babel/template':
-        optional: true
-      '@urql/core':
-        optional: true
-      immer:
-        optional: true
-      optics-ts:
-        optional: true
-      react-query:
-        optional: true
-      valtio:
-        optional: true
-      wonka:
-        optional: true
-      xstate:
-        optional: true
-    dependencies:
-      react: 17.0.2
-      react-query: 3.39.3_react@17.0.2
     dev: false
 
   /js-cookie/2.2.1:
@@ -11648,25 +11143,6 @@ packages:
         optional: true
     dev: false
 
-  /mobx-react-lite/3.4.3_react@17.0.2:
-    resolution:
-      {
-        integrity: sha512-NkJREyFTSUXR772Qaai51BnE1voWx56LOL80xG7qkZr6vo8vEaLF3sz1JNUVh+rxmUzxYaqOhfuxTfqUh0FXUg==,
-      }
-    peerDependencies:
-      mobx: ^6.1.0
-      react: ^16.8.0 || ^17 || ^18
-      react-dom: '*'
-      react-native: '*'
-    peerDependenciesMeta:
-      react-dom:
-        optional: true
-      react-native:
-        optional: true
-    dependencies:
-      react: 17.0.2
-    dev: false
-
   /mobx-react/7.6.0:
     resolution:
       {
@@ -11684,26 +11160,6 @@ packages:
         optional: true
     dependencies:
       mobx-react-lite: 3.4.3
-    dev: false
-
-  /mobx-react/7.6.0_react@17.0.2:
-    resolution:
-      {
-        integrity: sha512-+HQUNuh7AoQ9ZnU6c4rvbiVVl+wEkb9WqYsVDzGLng+Dqj1XntHu79PvEWKtSMoMj67vFp/ZPXcElosuJO8ckA==,
-      }
-    peerDependencies:
-      mobx: ^6.1.0
-      react: ^16.8.0 || ^17 || ^18
-      react-dom: '*'
-      react-native: '*'
-    peerDependenciesMeta:
-      react-dom:
-        optional: true
-      react-native:
-        optional: true
-    dependencies:
-      mobx-react-lite: 3.4.3_react@17.0.2
-      react: 17.0.2
     dev: false
 
   /mock-json-schema/1.1.1:
@@ -11764,26 +11220,6 @@ packages:
       csstype: 3.1.2
       fastest-stable-stringify: 2.0.2
       inline-style-prefixer: 6.0.4
-      rtl-css-js: 1.16.1
-      sourcemap-codec: 1.4.8
-      stacktrace-js: 2.0.2
-      stylis: 4.1.3
-    dev: false
-
-  /nano-css/5.3.5_react@17.0.2:
-    resolution:
-      {
-        integrity: sha512-vSB9X12bbNu4ALBu7nigJgRViZ6ja3OU7CeuiV1zMIbXOdmkLahgtPmh3GBOlDxbKY0CitqlPdOReGlBLSp+yg==,
-      }
-    peerDependencies:
-      react: '*'
-      react-dom: '*'
-    dependencies:
-      css-tree: 1.1.3
-      csstype: 3.1.2
-      fastest-stable-stringify: 2.0.2
-      inline-style-prefixer: 6.0.4
-      react: 17.0.2
       rtl-css-js: 1.16.1
       sourcemap-codec: 1.4.8
       stacktrace-js: 2.0.2
@@ -13019,17 +12455,6 @@ packages:
       react: '>=0.14.9'
     dev: false
 
-  /prism-react-renderer/1.3.5_react@17.0.2:
-    resolution:
-      {
-        integrity: sha512-IJ+MSwBWKG+SM3b2SUfdrhC+gu01QkV2KmRQgREThBfSQRoufqRfxfHUxpG1WcaFjP+kojcFyO9Qqtpgt3qLCg==,
-      }
-    peerDependencies:
-      react: '>=0.14.9'
-    dependencies:
-      react: 17.0.2
-    dev: false
-
   /prismjs/1.27.0:
     resolution:
       {
@@ -13357,21 +12782,6 @@ packages:
       - react-dom
     dev: false
 
-  /react-overflow-list/0.5.0_react@17.0.2:
-    resolution:
-      {
-        integrity: sha512-+UegukgQ10E4ll3txz4DJyrnCgZ3eDVuv5dvR8ziyG5FfgCDZcUKeKhIgbU90oyqQa21aH4oLOoGKt0TiYJRmg==,
-      }
-    engines: { node: '>=10' }
-    peerDependencies:
-      react: '>=16'
-    dependencies:
-      react: 17.0.2
-      react-use: 17.4.0_react@17.0.2
-    transitivePeerDependencies:
-      - react-dom
-    dev: false
-
   /react-query/3.39.3:
     resolution:
       {
@@ -13390,27 +12800,6 @@ packages:
       '@babel/runtime': 7.21.0
       broadcast-channel: 3.7.0
       match-sorter: 6.3.1
-    dev: false
-
-  /react-query/3.39.3_react@17.0.2:
-    resolution:
-      {
-        integrity: sha512-nLfLz7GiohKTJDuT4us4X3h/8unOh+00MLb2yJoGTPjxKs2bc1iDhkNx2bd5MKklXnOD3NrVZ+J2UXujA5In4g==,
-      }
-    peerDependencies:
-      react: ^16.8.0 || ^17.0.0 || ^18.0.0
-      react-dom: '*'
-      react-native: '*'
-    peerDependenciesMeta:
-      react-dom:
-        optional: true
-      react-native:
-        optional: true
-    dependencies:
-      '@babel/runtime': 7.21.0
-      broadcast-channel: 3.7.0
-      match-sorter: 6.3.1
-      react: 17.0.2
     dev: false
 
   /react-redux/8.0.5_zgqx625sccpdtyvb56abipzqvi:
@@ -13465,38 +12854,6 @@ packages:
       tiny-warning: 1.0.3
     dev: false
 
-  /react-router-dom/5.3.4_react@17.0.2:
-    resolution:
-      {
-        integrity: sha512-m4EqFMHv/Ih4kpcBCONHbkT68KoAeHN4p3lAGoNryfHi0dMy0kCzEZakiKRsvg5wHZ/JLrLW8o8KomWiz/qbYQ==,
-      }
-    peerDependencies:
-      react: '>=15'
-    dependencies:
-      '@babel/runtime': 7.21.0
-      history: 4.10.1
-      loose-envify: 1.4.0
-      prop-types: 15.8.1
-      react: 17.0.2
-      react-router: 5.3.4_react@17.0.2
-      tiny-invariant: 1.3.1
-      tiny-warning: 1.0.3
-    dev: false
-
-  /react-router-hash-link/2.4.3_nbt3wh3qkdiqet3j3quwfqco4i:
-    resolution:
-      {
-        integrity: sha512-NU7GWc265m92xh/aYD79Vr1W+zAIXDWp3L2YZOYP4rCqPnJ6LI6vh3+rKgkidtYijozHclaEQTAHaAaMWPVI4A==,
-      }
-    peerDependencies:
-      react: '>=15'
-      react-router-dom: '>=4'
-    dependencies:
-      prop-types: 15.8.1
-      react: 17.0.2
-      react-router-dom: 5.3.4_react@17.0.2
-    dev: false
-
   /react-router-hash-link/2.4.3_react-router-dom@5.3.4:
     resolution:
       {
@@ -13524,26 +12881,6 @@ packages:
       loose-envify: 1.4.0
       path-to-regexp: 1.8.0
       prop-types: 15.8.1
-      react-is: 16.13.1
-      tiny-invariant: 1.3.1
-      tiny-warning: 1.0.3
-    dev: false
-
-  /react-router/5.3.4_react@17.0.2:
-    resolution:
-      {
-        integrity: sha512-Ys9K+ppnJah3QuaRiLxk+jDWOR1MekYQrlytiXxC1RyfbdsZkS5pvKAzCCr031xHixZwpnsYNT5xysdFHQaYsA==,
-      }
-    peerDependencies:
-      react: '>=15'
-    dependencies:
-      '@babel/runtime': 7.21.0
-      history: 4.10.1
-      hoist-non-react-statics: 3.3.2
-      loose-envify: 1.4.0
-      path-to-regexp: 1.8.0
-      prop-types: 15.8.1
-      react: 17.0.2
       react-is: 16.13.1
       tiny-invariant: 1.3.1
       tiny-warning: 1.0.3
@@ -13577,32 +12914,6 @@ packages:
       prop-types: 15.8.1
     dev: false
 
-  /react-tabs/3.2.3_react@17.0.2:
-    resolution:
-      {
-        integrity: sha512-jx325RhRVnS9DdFbeF511z0T0WEqEoMl1uCE3LoZ6VaZZm7ytatxbum0B8bCTmaiV0KsU+4TtLGTGevCic7SWg==,
-      }
-    peerDependencies:
-      react: ^16.3.0 || ^17.0.0-0
-    dependencies:
-      clsx: 1.2.1
-      prop-types: 15.8.1
-      react: 17.0.2
-    dev: false
-
-  /react-universal-interface/0.6.2_react@17.0.2+tslib@2.5.0:
-    resolution:
-      {
-        integrity: sha512-dg8yXdcQmvgR13RIlZbTRQOoUrDciFVoSBZILwjE2LFISxZZ8loVJKAkuzswl5js8BHda79bIb2b84ehU8IjXw==,
-      }
-    peerDependencies:
-      react: '*'
-      tslib: '*'
-    dependencies:
-      react: 17.0.2
-      tslib: 2.5.0
-    dev: false
-
   /react-universal-interface/0.6.2_tslib@2.5.0:
     resolution:
       {
@@ -13632,32 +12943,6 @@ packages:
       js-cookie: 2.2.1
       nano-css: 5.3.5
       react-universal-interface: 0.6.2_tslib@2.5.0
-      resize-observer-polyfill: 1.5.1
-      screenfull: 5.2.0
-      set-harmonic-interval: 1.0.1
-      throttle-debounce: 3.0.1
-      ts-easing: 0.2.0
-      tslib: 2.5.0
-    dev: false
-
-  /react-use/17.4.0_react@17.0.2:
-    resolution:
-      {
-        integrity: sha512-TgbNTCA33Wl7xzIJegn1HndB4qTS9u03QUwyNycUnXaweZkE4Kq2SB+Yoxx8qbshkZGYBDvUXbXWRUmQDcZZ/Q==,
-      }
-    peerDependencies:
-      react: ^16.8.0  || ^17.0.0 || ^18.0.0
-      react-dom: ^16.8.0  || ^17.0.0 || ^18.0.0
-    dependencies:
-      '@types/js-cookie': 2.2.7
-      '@xobotyi/scrollbar-width': 1.9.5
-      copy-to-clipboard: 3.3.3
-      fast-deep-equal: 3.1.3
-      fast-shallow-equal: 1.0.0
-      js-cookie: 2.2.1
-      nano-css: 5.3.5_react@17.0.2
-      react: 17.0.2
-      react-universal-interface: 0.6.2_react@17.0.2+tslib@2.5.0
       resize-observer-polyfill: 1.5.1
       screenfull: 5.2.0
       set-harmonic-interval: 1.0.1
@@ -13805,48 +13090,6 @@ packages:
       prismjs: 1.29.0
       prop-types: 15.8.1
       react-tabs: 3.2.3
-      slugify: 1.4.7
-      stickyfill: 1.1.1
-      style-loader: 3.3.2
-      swagger2openapi: 7.0.8
-      url-template: 2.0.8
-    transitivePeerDependencies:
-      - encoding
-      - react-native
-      - webpack
-    dev: false
-
-  /redoc/2.0.0_react@17.0.2:
-    resolution:
-      {
-        integrity: sha512-rU8iLdAkT89ywOkYk66Mr+IofqaMASlRvTew0dJvopCORMIPUcPMxjlJbJNC6wsn2vvMnpUFLQ/0ISDWn9BWag==,
-      }
-    engines: { node: '>=6.9', npm: '>=3.0.0' }
-    peerDependencies:
-      core-js: ^3.1.4
-      mobx: ^6.0.4
-      react: ^16.8.4 || ^17.0.0
-      react-dom: ^16.8.4 || ^17.0.0
-      styled-components: ^4.1.1 || ^5.1.1
-    dependencies:
-      '@redocly/openapi-core': 1.0.0-beta.125
-      classnames: 2.3.2
-      decko: 1.2.0
-      dompurify: 2.4.5
-      eventemitter3: 4.0.7
-      json-pointer: 0.6.2
-      lunr: 2.3.9
-      mark.js: 8.11.1
-      marked: 4.3.0
-      mobx-react: 7.6.0_react@17.0.2
-      openapi-sampler: 1.3.1
-      path-browserify: 1.0.1
-      perfect-scrollbar: 1.5.5
-      polished: 4.2.2
-      prismjs: 1.29.0
-      prop-types: 15.8.1
-      react: 17.0.2
-      react-tabs: 3.2.3_react@17.0.2
       slugify: 1.4.7
       stickyfill: 1.1.1
       style-loader: 3.3.2
@@ -15562,6 +14805,13 @@ packages:
       - openapi-types
     dev: false
 
+  /swagger-ui-dist/4.18.2:
+    resolution:
+      {
+        integrity: sha512-oVBoBl9Dg+VJw8uRWDxlyUyHoNEDC0c1ysT6+Boy6CTgr2rUcLcfPon4RvxgS2/taNW6O0+US+Z/dlAsWFjOAQ==,
+      }
+    dev: false
+
   /swagger-ui/4.18.2:
     resolution:
       {
@@ -16522,19 +15772,6 @@ packages:
       '@juggle/resize-observer': 3.4.0
     dev: false
 
-  /use-resize-observer/9.1.0_react@17.0.2:
-    resolution:
-      {
-        integrity: sha512-R25VqO9Wb3asSD4eqtcxk8sJalvIOYBqS8MNZlpDSQ4l4xMQxC/J7Id9HoTqPq8FwULIn0PVW+OAqF2dyYbjow==,
-      }
-    peerDependencies:
-      react: 16.8.0 - 18
-      react-dom: 16.8.0 - 18
-    dependencies:
-      '@juggle/resize-observer': 3.4.0
-      react: 17.0.2
-    dev: false
-
   /use-sync-external-store/1.2.0_react@17.0.2:
     resolution:
       {
@@ -17437,21 +16674,6 @@ packages:
         optional: true
     dev: false
 
-  /zustand/3.7.2_react@17.0.2:
-    resolution:
-      {
-        integrity: sha512-PIJDIZKtokhof+9+60cpockVOq05sJzHCriyvaLBmEJixseQ1a5Kdov6fWZfWOu5SK9c+FhH1jU0tntLxRJYMA==,
-      }
-    engines: { node: '>=12.7.0' }
-    peerDependencies:
-      react: '>=16.8'
-    peerDependenciesMeta:
-      react:
-        optional: true
-    dependencies:
-      react: 17.0.2
-    dev: false
-
   /zwitch/1.0.5:
     resolution:
       {
@@ -17464,144 +16686,3 @@ packages:
       {
         integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==,
       }
-
-  file:packages/backend/astro-openapi-backend-0.0.1.tgz_4otp2jzgmjp4x7xmrwlykhut6m:
-    resolution:
-      {
-        integrity: sha512-TMSkk9nvcw/xvi+phobP3N8pichICc28qcsRAsXlD08yD+TYrLVwRebtovLbNm++Rv5HkXjykFXw9Dvm/D0wSA==,
-        tarball: file:packages/backend/astro-openapi-backend-0.0.1.tgz,
-      }
-    id: file:packages/backend/astro-openapi-backend-0.0.1.tgz
-    name: '@astro-openapi/backend'
-    version: 0.0.1
-    peerDependencies:
-      openapi-backend: ^5.9.1
-      vite-plugin-top-level-await: ^1.3.0
-    dependencies:
-      openapi-backend: 5.9.1
-      vite-plugin-top-level-await: 1.3.0
-    dev: false
-
-  file:packages/bundler/astro-openapi-bundler-0.0.1.tgz_mc77lqfcxzdh6cmfps7camscxi:
-    resolution:
-      {
-        integrity: sha512-PyGwkQsIhUnF8qdwgz3A9JdinY7KPHQkh+CfuR3oYluYSIUYvHz60vFPBXWVjKnhI6es5GrbPiFTf2QN93QgLg==,
-        tarball: file:packages/bundler/astro-openapi-bundler-0.0.1.tgz,
-      }
-    id: file:packages/bundler/astro-openapi-bundler-0.0.1.tgz
-    name: '@astro-openapi/bundler'
-    version: 0.0.1
-    peerDependencies:
-      '@apidevtools/swagger-parser': ^10.1.0
-    dependencies:
-      '@apidevtools/swagger-parser': 10.1.0
-    dev: false
-
-  file:packages/client/astro-openapi-client-0.0.2.tgz_wiufrgfvszabtv4isdqexea6yy:
-    resolution:
-      {
-        integrity: sha512-Z8d364VLQRmJB8R8RnjvnGXpSUeNCGCoTMgXUsh562MLQ6mrNm1Q3TFtcxNlh0bDsHPgUHG/djkVpmZd2uRBKQ==,
-        tarball: file:packages/client/astro-openapi-client-0.0.2.tgz,
-      }
-    id: file:packages/client/astro-openapi-client-0.0.2.tgz
-    name: '@astro-openapi/client'
-    version: 0.0.2
-    peerDependencies:
-      openapi-client-axios: ^7.1.3
-      vite-plugin-top-level-await: ^1.3.0
-    dependencies:
-      openapi-client-axios: 7.1.3
-      vite-plugin-top-level-await: 1.3.0
-    dev: false
-
-  file:packages/gui-elements/astro-openapi-gui-elements-0.0.2.tgz_react@17.0.2:
-    resolution:
-      {
-        integrity: sha512-eN/DqTfDsn68zPdSwWUa99Ovn/LD9X8OH39Ro83wLoEIxROtncl/7w0ltFKiFtBLFW3hJ/4x9bz7D147sgaruQ==,
-        tarball: file:packages/gui-elements/astro-openapi-gui-elements-0.0.2.tgz,
-      }
-    id: file:packages/gui-elements/astro-openapi-gui-elements-0.0.2.tgz
-    name: '@astro-openapi/gui-elements'
-    version: 0.0.2
-    dependencies:
-      '@stoplight/elements': 7.7.15_react@17.0.2
-    transitivePeerDependencies:
-      - '@babel/core'
-      - '@babel/template'
-      - '@urql/core'
-      - encoding
-      - immer
-      - jotai-devtools
-      - jotai-immer
-      - jotai-optics
-      - jotai-redux
-      - jotai-tanstack-query
-      - jotai-urql
-      - jotai-valtio
-      - jotai-xstate
-      - jotai-zustand
-      - optics-ts
-      - react
-      - react-dom
-      - react-native
-      - supports-color
-      - valtio
-      - wonka
-      - xstate
-    dev: false
-
-  file:packages/gui-redoc/astro-openapi-gui-redoc-0.0.2.tgz_react@17.0.2:
-    resolution:
-      {
-        integrity: sha512-40y4TBR0Xlr182Vk5e/iF53FXItqkUse92AoSN6exz5l0Ky1a0C+nG0NZr2AnoHxUcC91xWFwPMWOp9N0L2yLQ==,
-        tarball: file:packages/gui-redoc/astro-openapi-gui-redoc-0.0.2.tgz,
-      }
-    id: file:packages/gui-redoc/astro-openapi-gui-redoc-0.0.2.tgz
-    name: '@astro-openapi/gui-redoc'
-    version: 0.0.2
-    dependencies:
-      redoc: 2.0.0_react@17.0.2
-    transitivePeerDependencies:
-      - core-js
-      - encoding
-      - mobx
-      - react
-      - react-dom
-      - react-native
-      - styled-components
-      - webpack
-    dev: false
-
-  file:packages/gui-swagger/astro-openapi-gui-swagger-0.0.1.tgz:
-    resolution:
-      {
-        integrity: sha512-W70akP3MxeeW67rdb5Xz9xsTBXVu6iqfaZfzXMKfNc7bkCXGwgNy7YCgsLlTbbqlPWiJyeB4CIkj7m7e9JCIXA==,
-        tarball: file:packages/gui-swagger/astro-openapi-gui-swagger-0.0.1.tgz,
-      }
-    name: '@astro-openapi/gui-swagger'
-    version: 0.0.1
-    dependencies:
-      swagger-ui: 4.18.2
-    transitivePeerDependencies:
-      - '@types/react'
-      - '@types/react-dom'
-      - debug
-      - encoding
-      - react-native
-    dev: false
-
-  file:packages/typegen/astro-openapi-typegen-0.0.1.tgz_vb5oxmff3hg6k2qkursabaw3ri:
-    resolution:
-      {
-        integrity: sha512-TAAVDDBMOS2bp8tTZIVUurpN2QKfVkeBdeou+N8O1ilCrdvEejNHuiPCKl4bme0C5kb+bbNLvAVqBoJeS8gcag==,
-        tarball: file:packages/typegen/astro-openapi-typegen-0.0.1.tgz,
-      }
-    id: file:packages/typegen/astro-openapi-typegen-0.0.1.tgz
-    name: '@astro-openapi/typegen'
-    version: 0.0.1
-    peerDependencies:
-      openapi-client-axios-typegen: ^7.1.3
-    dependencies:
-      openapi-client-axios-typegen: 7.1.3
-      prettier: 2.8.7
-    dev: false

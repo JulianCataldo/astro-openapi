@@ -6,12 +6,14 @@ import { generateTypesForDocument } from 'openapi-client-axios-typegen';
 
 /* ========================================================================== */
 
+const defaultBundleDest = 'src/types/openapi.d.ts';
+
 function generate(def: string) {
 	// process.chdir(path.join(process.cwd(), 'src/definitions'));
 	generateTypesForDocument(def, {
 		transformOperationName: (operationName) => operationName,
 	})
-		.then((output) => {
+		.then(async (output) => {
 			// process.chdir(process.cwd());
 			const data =
 				"declare module 'astro-openapi:types' {" +
@@ -22,8 +24,12 @@ function generate(def: string) {
 	}
 }` +
 				`}`;
+
+			const p = path.join(process.cwd(), defaultBundleDest);
+
+			await fs.mkdir(path.dirname(p), { recursive: true });
 			fs.writeFile(
-				'./src/types/openapi.d.ts',
+				p,
 				// TODO: load workspace prettier config.
 				prettier.format(data, { parser: 'typescript', singleQuote: true }),
 			).catch((err) => {

@@ -21,6 +21,7 @@
 		"./index.ts",
 		"./app.ts",
 		"./get.ts",
+		"./integration.ts",
 		"./index.ts"
 	],
 	"scripts": {
