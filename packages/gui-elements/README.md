@@ -1,3 +1,3 @@
 # 🚀  Astro OpenAPI — GUI Stoplight Elements
 
-See [project documentation](https://github.com/JulianCataldo/astro-openapi/README.md).
+See [project documentation](https://github.com/JulianCataldo/astro-openapi#readme).
