@@ -1,5 +1,11 @@
 # @astro-openapi/client
 
+## 0.0.4
+
+### Patch Changes
+
+- [`b99d9ea`](https://github.com/JulianCataldo/astro-openapi/commit/b99d9eabb93ef8bf1bb0983813ea34eb13e93f0c) Thanks [@JulianCataldo](https://github.com/JulianCataldo)! - Fix package, imports
+
 ## 0.0.3
 
 ### Patch Changes
