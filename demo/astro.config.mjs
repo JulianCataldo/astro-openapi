@@ -4,7 +4,8 @@ import node from '@astrojs/node';
 
 import openapiBackend from '@astro-openapi/backend';
 import openapiClient from '@astro-openapi/client';
-import openapiTypegen from '@astro-openapi/typegen';
+// FIXME: outputs `<script type="module" src="/@vite/client"></script>` to all server endpoints with sandboxes
+// import openapiTypegen from '@astro-openapi/typegen';
 import openapiBundler from '@astro-openapi/bundler';
 
 // import openapiGuiSwagger from '@astro-openapi/gui-swagger';
@@ -24,10 +25,11 @@ export default defineConfig({
 
 	integrations: [
 		//
-		openapiBundler(),
 		openapiBackend(),
 		openapiClient(),
-		openapiTypegen(),
+		// openapiTypegen(),
+		openapiBundler(),
+
 		// openapiGuiSwagger(),
 		// openapiGuiElements(),
 		// openapiGuiRedoc(),
