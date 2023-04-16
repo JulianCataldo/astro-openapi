@@ -1,0 +1,46 @@
+{
+	"name": "@astro-openapi/client",
+	"version": "0.0.0",
+	"description": "Generate helpers for fetching an OpenAPI endpoint.\nSupports vanilla fetchers, React Queries, Nano stores…",
+	"// source": "./index.ts",
+	"// astro-integration": "",
+	"keywords": [
+		"client",
+		"open-api",
+		"fetch",
+		"schemas",
+		"types",
+		"browser"
+	],
+	"license": "ISC",
+	"author": "Julian Cataldo",
+	"type": "module",
+	"// main": "./dist/index.js",
+	"main": "./index.ts",
+	"files": [
+		"./index.ts",
+		"./get-client.ts",
+		"./index.ts"
+	],
+	"scripts": {
+		"// build": "tsc",
+		"// clean": "rm -rf dist .turbo",
+		"// dev": "tsc -w",
+		"// test": "echo \"Error: no test specified\" &amp;&amp; exit 1"
+	},
+	"dependencies": {
+		"openapi-client-axios": "^7.1.3"
+	},
+	"devDependencies": {
+		"@types/node": "^18.11.18",
+		"astro": "^1.8.0",
+		"openapi-types": "^12.1.0",
+		"typescript": "^4.9.4"
+	},
+	"peerDependencies": {
+		"openapi-client-axios": "^7.1.3"
+	},
+	"publishConfig": {
+		"access": "public"
+	}
+}
