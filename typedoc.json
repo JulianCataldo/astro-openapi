@@ -1,0 +1,21 @@
+{
+	"name": "Astro OpenAPI",
+	"entryPointStrategy": "packages",
+
+	"entryPoints": [
+		"packages/backend",
+		"packages/client",
+		"packages/typegen",
+		"packages/bundler",
+		"packages/gui-swagger",
+		"packages/gui-redoc",
+		"packages/gui-elements"
+	],
+
+	"out": "./.typedoc",
+
+	"plugin": ["typedoc-plugin-markdown"],
+
+	"githubPages": false,
+	"readme": "none"
+}
