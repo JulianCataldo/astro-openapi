@@ -104,28 +104,30 @@ importers:
       '@astro-openapi/client': latest
       '@astro-openapi/gui-elements': latest
       '@astro-openapi/gui-redoc': latest
-      '@astro-openapi/gui-swagger': latest
+      '@astro-openapi/gui-swagger': workspace:gui-swagger
       '@astro-openapi/typegen': latest
       '@faker-js/faker': 7.6.0
       astro: 2.1.2
       openapi-backend: 5.9.1
       openapi-client-axios: 7.1.3
       openapi-client-axios-typegen: 7.1.3
+      sass: ^1.62.0
       vite-plugin-top-level-await: ^1.3.0
     dependencies:
       '@apidevtools/swagger-parser': 10.1.0
       '@astro-openapi/backend': link:../packages/backend
       '@astro-openapi/bundler': link:../packages/bundler
-      '@astro-openapi/client': link:../packages/client
+      '@astro-openapi/client': 0.0.3_wiufrgfvszabtv4isdqexea6yy
       '@astro-openapi/gui-elements': link:../packages/gui-elements
       '@astro-openapi/gui-redoc': link:../packages/gui-redoc
       '@astro-openapi/gui-swagger': link:../packages/gui-swagger
-      '@astro-openapi/typegen': link:../packages/typegen
+      '@astro-openapi/typegen': 0.0.3_vb5oxmff3hg6k2qkursabaw3ri
       '@faker-js/faker': 7.6.0
-      astro: 2.1.2
+      astro: 2.1.2_sass@1.62.0
       openapi-backend: 5.9.1
       openapi-client-axios: 7.1.3
       openapi-client-axios-typegen: 7.1.3
+      sass: 1.62.0
       vite-plugin-top-level-await: 1.3.0
 
   packages/backend:
@@ -363,6 +365,31 @@ packages:
       call-me-maybe: 1.0.2
     dev: false
 
+  /@astro-openapi/client/0.0.3_wiufrgfvszabtv4isdqexea6yy:
+    resolution:
+      {
+        integrity: sha512-Waqge+6gvyEPMySA9yzQBwDLLD4keDq+LQKWCcEgy6/P1JAeI+2z36HYwGeavDuu4Bi2rMtXbYkb7Kh7NCX7AA==,
+      }
+    peerDependencies:
+      openapi-client-axios: ^7.1.3
+      vite-plugin-top-level-await: ^1.3.0
+    dependencies:
+      openapi-client-axios: 7.1.3
+      vite-plugin-top-level-await: 1.3.0
+    dev: false
+
+  /@astro-openapi/typegen/0.0.3_vb5oxmff3hg6k2qkursabaw3ri:
+    resolution:
+      {
+        integrity: sha512-1Nz6TmE0T1tstbfopYoQthMaNgH/EkG7dORCq0FU57wmSgXd4AqBj9yiIXFqsAdVn3rlaNXJekW4ptikThn9AA==,
+      }
+    peerDependencies:
+      openapi-client-axios-typegen: ^7.1.3
+    dependencies:
+      openapi-client-axios-typegen: 7.1.3
+      prettier: 2.8.7
+    dev: false
+
   /@astrojs/compiler/0.31.4:
     resolution:
       {
@@ -438,7 +465,7 @@ packages:
       astro: ^2.3.0
     dependencies:
       '@astrojs/prism': 2.1.1
-      astro: 2.1.2
+      astro: 2.1.2_sass@1.62.0
       github-slugger: 1.5.0
       import-meta-resolve: 2.2.2
       rehype-raw: 6.1.1
@@ -4447,7 +4474,7 @@ packages:
       - ts-node
     dev: true
 
-  /astro/2.1.2:
+  /astro/2.1.2_sass@1.62.0:
     resolution:
       {
         integrity: sha512-qxBIPHfFJhwNOxI2E96XrGrUM6lGkDRkDY8iqEJNFWPGP+t5yY5SWb8H+OdYUGopexy1GGjoY7SYQCzFBkt7iw==,
@@ -4510,7 +4537,7 @@ packages:
       typescript: 5.0.4
       unist-util-visit: 4.1.2
       vfile: 5.3.7
-      vite: 4.2.1
+      vite: 4.2.1_sass@1.62.0
       vitefu: 0.2.4_vite@4.2.1
       yargs-parser: 21.1.1
       zod: 3.21.4
@@ -8521,6 +8548,12 @@ packages:
       }
     engines: { node: '>=0.10.0' }
     dev: false
+
+  /immutable/4.3.0:
+    resolution:
+      {
+        integrity: sha512-0AOCmOip+xgJwEVTQj1EfiDDOkPmuyllDuTuEX+DDXUgapLAsBIfkg3sxCYyCEA8mQqZrrxPUGjcOQ2JS3WLkg==,
+      }
 
   /import-fresh/3.3.0:
     resolution:
@@ -13552,6 +13585,18 @@ packages:
     dependencies:
       suf-log: 2.5.3
 
+  /sass/1.62.0:
+    resolution:
+      {
+        integrity: sha512-Q4USplo4pLYgCi+XlipZCWUQz5pkg/ruSSgJ0WRDSb/+3z9tXUOkQ7QPYn4XrhZKYAK4HlpaQecRwKLJX6+DBg==,
+      }
+    engines: { node: '>=14.0.0' }
+    hasBin: true
+    dependencies:
+      chokidar: 3.5.3
+      immutable: 4.3.0
+      source-map-js: 1.0.2
+
   /scheduler/0.20.2:
     resolution:
       {
@@ -15969,6 +16014,7 @@ packages:
       rollup: 3.20.3
     optionalDependencies:
       fsevents: 2.3.2
+    dev: true
 
   /vite/4.2.1_@types+node@18.15.11:
     resolution:
@@ -16007,6 +16053,42 @@ packages:
       fsevents: 2.3.2
     dev: true
 
+  /vite/4.2.1_sass@1.62.0:
+    resolution:
+      {
+        integrity: sha512-7MKhqdy0ISo4wnvwtqZkjke6XN4taqQ2TBaTccLIpOKv7Vp2h4Y+NpmWCnGDeSvvn45KxvWgGyb0MkHvY1vgbg==,
+      }
+    engines: { node: ^14.18.0 || >=16.0.0 }
+    hasBin: true
+    peerDependencies:
+      '@types/node': '>= 14'
+      less: '*'
+      sass: '*'
+      stylus: '*'
+      sugarss: '*'
+      terser: ^5.4.0
+    peerDependenciesMeta:
+      '@types/node':
+        optional: true
+      less:
+        optional: true
+      sass:
+        optional: true
+      stylus:
+        optional: true
+      sugarss:
+        optional: true
+      terser:
+        optional: true
+    dependencies:
+      esbuild: 0.17.16
+      postcss: 8.4.22
+      resolve: 1.22.3
+      rollup: 3.20.3
+      sass: 1.62.0
+    optionalDependencies:
+      fsevents: 2.3.2
+
   /vitefu/0.2.4_vite@3.2.5:
     resolution:
       {
@@ -16032,7 +16114,7 @@ packages:
       vite:
         optional: true
     dependencies:
-      vite: 4.2.1
+      vite: 4.2.1_sass@1.62.0
 
   /vscode-css-languageservice/6.2.4:
     resolution:

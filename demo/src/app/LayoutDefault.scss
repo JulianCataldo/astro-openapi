@@ -1,47 +1,49 @@
 main {
-  $full-height: calc(100vh - var(--main-nav-height) - 0.5rem);
+	$full-height: calc(100vh - var(--main-nav-height) - 0.5rem);
 
-  & > :global(aside) {
-    padding-top: 1rem;
-    padding-left: 2rem;
+	& > :global(aside) {
+		padding-top: 1rem;
+		padding-left: 2rem;
 
-    @media screen and (width >= 1200px) {
-      position: sticky;
-      top: 0;
-      width: calc(13rem + 3vw);
-      height: $full-height;
-      padding-top: calc(2rem + 3vw);
-      padding-right: 1vw;
-      padding-left: 3vw;
-      margin-bottom: calc($full-height * -1);
-      overflow-y: auto;
-    }
-  }
+		@media screen and (width >= 1200px) {
+			position: sticky;
+			top: 0;
+			width: calc(13rem + 3vw);
+			height: $full-height;
+			padding-top: calc(2rem + 3vw);
+			padding-right: 1vw;
+			padding-left: 3vw;
+			margin-bottom: calc($full-height * -1);
+			overflow-y: auto;
+		}
+	}
 
-  & > :global(article) {
-    width: calc(34rem + 32vw);
-    padding: 0 5vw 0 12vw;
-    margin: 0 auto;
-    margin-top: 5rem;
-    margin-bottom: 15rem;
-  }
+	& > :global(article) {
+		width: calc(34rem + 32vw);
+		padding: 0 5vw 0 12vw;
+		margin: 0 auto;
+		margin-top: 5rem;
+		margin-bottom: 15rem;
+	}
 
-  & > :global(iframe) {
-    width: 100%;
-    height: $full-height;
-    border: none;
-  }
+	& > :global(iframe) {
+		width: 100%;
+		height: $full-height;
+		border: none;
+	}
 }
 
 footer {
-  padding: 10rem 5rem 8rem 5rem;
-  text-align: center;
+	padding: 10rem 5rem 8rem 5rem;
+	text-align: center;
 }
 
 .nav-main {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: var(--main-nav-height);
-  padding: 1rem 10vw;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 2rem;
+	align-items: center;
+	justify-content: space-evenly;
+	height: var(--main-nav-height);
+	padding: 1rem 10vw;
 }
