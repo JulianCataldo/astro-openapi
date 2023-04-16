@@ -8,13 +8,16 @@ const SwaggerParser = await import('@apidevtools/swagger-parser').then(
 	({ default: d }) => d,
 );
 
+// TODO: make it configurable
+const defaultBundleDest = 'public/api/openapi.json';
+
 function bundle(oaDefinitionPath: string) {
 	SwaggerParser.bundle(oaDefinitionPath)
-		.then((res) => {
-			fs.writeFile(
-				'./public/api/openapi.json',
-				JSON.stringify(res, null, 2),
-			).catch((err) => {
+		.then(async (res) => {
+			const p = path.join(process.cwd(), defaultBundleDest);
+			const data = JSON.stringify(res, null, 2);
+			await fs.mkdir(path.dirname(p), { recursive: true });
+			await fs.writeFile(p, data).catch((err) => {
 				throw err;
 			});
 		})

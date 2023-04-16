@@ -1,6 +1,6 @@
 {
 	"name": "@astro-openapi/gui-elements",
-	"version": "0.0.0",
+	"version": "0.0.2",
 	"description": "",
 	"displayName": "Stoplight Elements",
 	"keywords": [
@@ -13,7 +13,8 @@
 		"gui",
 		"typegen",
 		"elements",
-		"stoplight"
+		"stoplight",
+		"astro-integration"
 	],
 	"license": "ISC",
 	"author": "Julian Cataldo",

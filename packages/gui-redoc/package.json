@@ -1,6 +1,6 @@
 {
 	"name": "@astro-openapi/gui-redoc",
-	"version": "0.0.0",
+	"version": "0.0.2",
 	"description": "",
 	"keywords": [
 		"withastro",
@@ -11,7 +11,8 @@
 		"playground",
 		"gui",
 		"typegen",
-		"redocly"
+		"redocly",
+		"astro-integration"
 	],
 	"license": "ISC",
 	"author": "Julian Cataldo",

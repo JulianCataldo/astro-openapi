@@ -1,4 +1,4 @@
-import OpenAPIClientAxios from 'openapi-client-axios';
+import { OpenAPIClientAxios } from 'openapi-client-axios';
 import type { OpenAPIV3_1 } from 'openapi-types';
 // import type { Client } from '../types/openapi.js';
 // import apiDoc from '../openapi.json' assert { type: 'json' };

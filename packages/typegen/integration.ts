@@ -7,10 +7,12 @@ import { generateTypesForDocument } from 'openapi-client-axios-typegen';
 /* ========================================================================== */
 
 function generate(def: string) {
+	// process.chdir(path.join(process.cwd(), 'src/definitions'));
 	generateTypesForDocument(def, {
 		transformOperationName: (operationName) => operationName,
 	})
 		.then((output) => {
+			// process.chdir(process.cwd());
 			const data =
 				"declare module 'astro-openapi:types' {" +
 				`${output.join('\n')}\n` +
@@ -31,6 +33,8 @@ function generate(def: string) {
 		.catch((err) => {
 			throw err;
 		});
+
+	// process.chdir(process.cwd());
 }
 
 const defaultDefinitionPath = '/src/definitions/openapi.yaml';

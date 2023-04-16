@@ -1,6 +1,6 @@
 {
 	"name": "@astro-openapi/typegen",
-	"version": "0.0.0",
+	"version": "0.0.1",
 	"description": "",
 	"// astro-integration": "",
 	"keywords": [
@@ -12,12 +12,13 @@
 		"operations",
 		"specs-to-api",
 		"rpc",
-		"typegen"
+		"typegen",
+		"astro-integration"
 	],
 	"license": "ISC",
 	"author": "Julian Cataldo",
 	"type": "module",
-	"main": "./dist/index.js",
+	"main": "./index.ts",
 	"files": [
 		"./index.ts",
 		"./integration.ts"

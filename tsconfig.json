@@ -1,10 +1,10 @@
 {
 	"compilerOptions": {
 		// "baseUrl": ".",
-		"paths": {},
+		// "paths": {},
 
-		"target": "ESNext",
-		"module": "ESNext",
+		"target": "ES2022",
+		"module": "ES2022",
 
 		"moduleResolution": "node",
 
@@ -42,8 +42,8 @@
 
 		"allowUnreachableCode": false,
 
-		"allowUnusedLabels": false,
+		"allowUnusedLabels": false
 
-		"declaration": true
+		// "declaration": true
 	}
 }

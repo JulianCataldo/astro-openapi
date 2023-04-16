@@ -1,10 +1,10 @@
 {
 	"compilerOptions": {
-		"baseUrl": ".",
-		"paths": {},
+		// "baseUrl": ".",
+		// "paths": {},
 
-		"target": "ESNext",
-		"module": "ESNext",
+		"target": "ES2022",
+		"module": "ES2022",
 
 		"moduleResolution": "node",
 
@@ -43,9 +43,11 @@
 
 		"allowUnusedLabels": false,
 
-		"declaration": true,
+		// "declaration": true,
 
-		"outDir": "./dist"
-	},
-	"include": ["./*.ts"]
+		// "outDir": "./dist"
+
+		"noEmit": true
+	}
+	// "include": ["./*.ts"]
 }

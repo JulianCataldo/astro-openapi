@@ -1,6 +1,6 @@
 {
 	"name": "@astro-openapi/bundler",
-	"version": "0.0.0",
+	"version": "0.0.1",
 	"description": "",
 	"keywords": [
 		"withastro",
@@ -12,7 +12,8 @@
 		"operations",
 		"specs-to-api",
 		"backend",
-		"adapter"
+		"adapter",
+		"astro-integration"
 	],
 	"license": "ISC",
 	"author": "Julian Cataldo",

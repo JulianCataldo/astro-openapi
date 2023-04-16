@@ -24,6 +24,10 @@ concurrency: ${{ github.workflow }}-${{ github.ref }}
 
 env: { CI: true, FORCE_COLOR: true }
 
+# NOT WORKING
+# permissions:
+#   pull-requests: write
+
 # ==============================================================================
 
 jobs:
@@ -31,9 +35,8 @@ jobs:
     name: Continous Integration
     timeout-minutes: 15
     runs-on: ubuntu-latest
-    permissions:
-      id-token: write
-      pull-requests: write
+
+    permissions: write-all
 
     steps:
       - name: Checkout code repository

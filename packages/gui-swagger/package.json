@@ -1,6 +1,6 @@
 {
 	"name": "@astro-openapi/gui-swagger",
-	"version": "0.0.0",
+	"version": "0.0.1",
 	"description": "",
 	"keywords": [
 		"withastro",
@@ -11,7 +11,8 @@
 		"playground",
 		"gui",
 		"typegen",
-		"swagger-ui"
+		"swagger-ui",
+		"astro-integration"
 	],
 	"license": "ISC",
 	"author": "Julian Cataldo",
