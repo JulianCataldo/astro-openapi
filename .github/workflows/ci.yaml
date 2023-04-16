@@ -43,8 +43,8 @@ jobs:
       # - name: Setup Turbo
       #   uses: JulianCataldo/gh-actions/turbo@main
 
-      # - name: Setup Node + PNPM
-      #   uses: JulianCataldo/gh-actions/node-pnpm@main
+      - name: Setup Node + PNPM
+        uses: JulianCataldo/gh-actions/node-pnpm@main
 
       # ========================================================================
 
