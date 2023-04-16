@@ -104,7 +104,7 @@ importers:
       '@astro-openapi/client': latest
       '@astro-openapi/gui-elements': latest
       '@astro-openapi/gui-redoc': latest
-      '@astro-openapi/gui-swagger': workspace:gui-swagger
+      '@astro-openapi/gui-swagger': latest
       '@astro-openapi/typegen': latest
       '@astrojs/node': ^5.1.1
       '@faker-js/faker': 7.6.0
