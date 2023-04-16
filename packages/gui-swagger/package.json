@@ -31,7 +31,6 @@
 		"test": "echo \"Error: no test specified\" &amp;&amp; exit 1"
 	},
 	"dependencies": {
-		"swagger-ui": "^4.18.2",
 		"swagger-ui-dist": "^4.18.2"
 	},
 	"devDependencies": {

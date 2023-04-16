@@ -3,6 +3,12 @@ import type { OpenAPIV3_1 } from 'openapi-types';
 // import type { Client } from '../types/openapi.js';
 // import apiDoc from '../openapi.json' assert { type: 'json' };
 
+declare global {
+	interface ImportMeta {
+		env: any;
+	}
+}
+
 export const defaultBundleUrl = `${
 	(import.meta.env.SITE as string | undefined) ?? ''
 }/${import.meta.env.BASE_URL}/api/openapi.json`;
