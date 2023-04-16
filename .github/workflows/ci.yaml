@@ -31,9 +31,8 @@ jobs:
     name: Continous Integration
     timeout-minutes: 15
     runs-on: ubuntu-latest
-    permissions:
-      id-token: write
-      pull-requests: write
+
+    permissions: write-all
 
     steps:
       - name: Checkout code repository
