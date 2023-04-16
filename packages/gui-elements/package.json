@@ -1,0 +1,39 @@
+{
+	"name": "@astro-openapi/gui-elements",
+	"version": "0.0.0",
+	"description": "",
+	"displayName": "Stoplight Elements",
+	"keywords": [
+		"withastro",
+		"openapi",
+		"api",
+		"docs",
+		"specs-to-api",
+		"playground",
+		"gui",
+		"typegen",
+		"elements",
+		"stoplight"
+	],
+	"license": "ISC",
+	"author": "Julian Cataldo",
+	"type": "module",
+	"main": "./index.ts",
+	"files": [
+		"./index.ts",
+		"./OpenApiGuiElements.astro"
+	],
+	"scripts": {
+		"test": "echo \"Error: no test specified\" &amp;&amp; exit 1"
+	},
+	"dependencies": {
+		"@stoplight/elements": "^7.7.7"
+	},
+	"devDependencies": {
+		"astro": "^2.1.2",
+		"typescript": "^4.9.4"
+	},
+	"publishConfig": {
+		"access": "public"
+	}
+}

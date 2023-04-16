@@ -1,0 +1,28 @@
+---
+import OpenApiGuiElements from './OpenApiGuiElements.astro';
+
+// TODO: configuration Schema URL
+const schemaUrl = 'http://localhost:9402/api/openapi.json';
+
+// NOTE: Is it a good idea?
+export const prerender = true;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>API Reference</title>
+	</head>
+
+	<body>
+		<OpenApiGuiElements schemaUrl={schemaUrl} />
+	</body>
+</html>
+
+<style is:global>
+	body {
+		background: white;
+	}
+</style>

@@ -1,0 +1,38 @@
+---
+export interface Props {
+	/**
+	 * **Default**: `https://petstore.swagger.io/v2/swagger.json`
+	 * */
+
+	schemaUrl: string;
+}
+
+const { schemaUrl = 'https://petstore.swagger.io/v2/swagger.json' } =
+	Astro.props as Props;
+
+// TODO: Enclose in Web Components for scoping w. LINK tag for styles (at least)
+---
+
+<elements-api apiDescriptionUrl={schemaUrl} router="hash"></elements-api>
+
+<script>
+	import '@stoplight/elements/web-components.min';
+</script>
+
+<style>
+	@import '@stoplight/elements/styles.min.css';
+
+	elements-api {
+		display: block;
+		height: 100vh;
+	}
+</style>
+
+<script>
+	if (import.meta.hot) {
+		import.meta.hot.on('vite:beforeFullReload', (e) => {
+			console.error(e);
+			throw new Error('(skipping full reload)');
+		});
+	}
+</script>
