@@ -1,0 +1,47 @@
+{
+	"name": "@astro-openapi/typegen",
+	"version": "0.0.0",
+	"description": "",
+	"// astro-integration": "",
+	"keywords": [
+		"withastro",
+		"server",
+		"client",
+		"openapi",
+		"api",
+		"operations",
+		"specs-to-api",
+		"rpc",
+		"typegen"
+	],
+	"license": "ISC",
+	"author": "Julian Cataldo",
+	"type": "module",
+	"main": "./dist/index.js",
+	"files": [
+		"./index.ts",
+		"./integration.ts"
+	],
+	"scripts": {
+		"// build": "tsc",
+		"// clean": "rm -rf dist .turbo",
+		"// dev": "tsc -w",
+		"// test": "echo \"No test specified\""
+	},
+	"dependencies": {
+		"openapi-client-axios-typegen": "^7.1.3",
+		"prettier": "^2.8.7"
+	},
+	"peerDependencies": {
+		"openapi-client-axios-typegen": "^7.1.3"
+	},
+	"devDependencies": {
+		"@types/node": "^18.15.0",
+		"@types/prettier": "^2.7.2",
+		"astro": "^2.1.2",
+		"typescript": "^4.9.5"
+	},
+	"publishConfig": {
+		"access": "public"
+	}
+}
