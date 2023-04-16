@@ -1,6 +1,6 @@
 {
 	"name": "@astro-openapi/client",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "Generate helpers for fetching an OpenAPI endpoint.\nSupports vanilla fetchers, React Queries, Nano stores…",
 	"// source": "./index.ts",
 	"keywords": [
