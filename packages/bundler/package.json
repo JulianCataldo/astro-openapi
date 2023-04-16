@@ -1,0 +1,45 @@
+{
+	"name": "@astro-openapi/bundler",
+	"version": "0.0.0",
+	"description": "",
+	"keywords": [
+		"withastro",
+		"server",
+		"openapi",
+		"request",
+		"handler",
+		"api",
+		"operations",
+		"specs-to-api",
+		"backend",
+		"adapter"
+	],
+	"license": "ISC",
+	"author": "Julian Cataldo",
+	"type": "module",
+	"main": "./index.ts",
+	"files": [
+		"./index.ts",
+		"./integration.ts"
+	],
+	"scripts": {
+		"build": "tsc",
+		"clean": "rm -rf dist .turbo",
+		"dev": "tsc -w",
+		"test": "echo \"No test specified\""
+	},
+	"dependencies": {
+		"@apidevtools/swagger-parser": "^10.1.0"
+	},
+	"peerDependencies": {
+		"@apidevtools/swagger-parser": "^10.1.0"
+	},
+	"devDependencies": {
+		"@types/node": "^18.15.0",
+		"astro": "^2.1.2",
+		"typescript": "^4.9.5"
+	},
+	"publishConfig": {
+		"access": "public"
+	}
+}
