@@ -12,7 +12,9 @@ info:
     name: Apache 2.0
     url: https://www.apache.org/licenses/LICENSE-2.0.html
 servers:
-  - url: http://localhost:9402/api
+  # First authoritative one will get replaced by `SITE` + `BASE_URL` + `/api` env.
+  - url: https://my-host:1337/api
+  - url: https://my-host-mirror:1234/api-foo
 paths:
   /persons:
     get:

@@ -1,6 +1,6 @@
 # DELETE ME (excluded from demo purposes only)
 ############
-public/api/*
+# public/api/*
 # openapi.d.ts
 env.d.ts
 #############

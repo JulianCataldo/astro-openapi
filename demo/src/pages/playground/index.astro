@@ -6,14 +6,16 @@ import DataOperations from '../../modules/DataOperations.astro';
 
 // Demo from Server-Side:
 
-const person = await client.findPersonById({ id: 123 });
+const person = await client.findPersonById({ id: 123 }).catch((e) => {
+	console.error(e);
+});
 ---
 
 <LayoutDefault>
 	<div slot="content" class="root">
 		<div>
 			<h2>Client data, from server-side</h2>
-			<pre>{JSON.stringify(person.data,null, 4)}</pre>
+			<pre>{JSON.stringify(person?.data,null, 4)}</pre>
 		</div>
 
 		<hr />
