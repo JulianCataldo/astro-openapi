@@ -1,6 +1,6 @@
 {
 	"name": "@astro-openapi/demo",
-	"version": "0.0.0",
+	"version": "0.0.1",
 	"private": true,
 	"type": "module",
 	"scripts": {
@@ -12,12 +12,12 @@
 	},
 	"dependencies": {
 		"@apidevtools/swagger-parser": "10.1.0",
-		"@astro-openapi/backend": "^0.0.2",
+		"@astro-openapi/backend": "^0.0.3",
 		"@astro-openapi/bundler": "^0.0.2",
-		"@astro-openapi/client": "^0.0.4",
-		"@astro-openapi/gui-elements": "^0.0.2",
-		"@astro-openapi/gui-redoc": "^0.0.2",
-		"@astro-openapi/gui-swagger": "^0.0.4",
+		"@astro-openapi/client": "^0.0.5",
+		"@astro-openapi/gui-elements": "^0.0.3",
+		"@astro-openapi/gui-redoc": "^0.0.3",
+		"@astro-openapi/gui-swagger": "^0.0.5",
 		"@astro-openapi/typegen": "^0.0.3",
 		"@astrojs/node": "^5.1.1",
 		"@faker-js/faker": "7.6.0",

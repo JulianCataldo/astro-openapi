@@ -1,5 +1,11 @@
 # @astro-openapi/gui-redoc
 
+## 0.0.3
+
+### Patch Changes
+
+- [`aea48ed`](https://github.com/JulianCataldo/astro-openapi/commit/aea48eddfb2d8db7b2edff45114bf99cbbfb8f7c) Thanks [@JulianCataldo](https://github.com/JulianCataldo)! - Auto-set dev server for client, sandbox fixes
+
 ## 0.0.2
 
 ### Patch Changes
