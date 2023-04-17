@@ -4,4 +4,4 @@
 
 - <https://astro-openapi.juliancataldo.com>
 - <https://astro-openapi.netlify.app> (mirror)
-- [Documentation content](./docs) (in current repository)
+- [Documentation content](https://github.com/JulianCataldo/astro-openapi/tree/main/docs) (in current repository)
