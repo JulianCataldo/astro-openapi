@@ -1,5 +1,5 @@
 packages:
-  - ./demo
+  # - ./demo
   - ./docs
   - ./packages/backend
   - ./packages/typegen
