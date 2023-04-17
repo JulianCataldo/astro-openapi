@@ -1,13 +1,13 @@
 ---
 export interface Props {
 	/**
-	 * **Default**: `https://petstore.swagger.io/v2/swagger.json`
+	 * **Default**: `https://petstore3.swagger.io/api/v3/openapi.json`
 	 * */
 
 	schemaUrl: string;
 }
 
-const { schemaUrl = 'https://petstore.swagger.io/v2/swagger.json' } =
+const { schemaUrl = 'https://petstore3.swagger.io/api/v3/openapi.json' } =
 	Astro.props as Props;
 
 // TODO: Enclose in Web Components for scoping w. LINK tag for styles (at least)

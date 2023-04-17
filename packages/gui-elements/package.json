@@ -22,6 +22,7 @@
 	"main": "./index.ts",
 	"files": [
 		"./index.ts",
+		"./integration.ts",
 		"./OpenApiGuiElements.astro"
 	],
 	"scripts": {

@@ -8,10 +8,13 @@ declare global {
 		env: any;
 	}
 }
+const siteUrl = `${(import.meta.env.SITE as string | undefined) ?? ''}${
+	import.meta.env.BASE_URL
+}`;
+const apiUrl = `${siteUrl}api`;
 
-export const defaultBundleUrl = `${
-	(import.meta.env.SITE as string | undefined) ?? ''
-}/${import.meta.env.BASE_URL}/api/openapi.json`;
+// TODO: make it configurable
+export const defaultBundleUrl = `${apiUrl}/openapi.json`;
 
 // eslint-disable-next-line @typescript-eslint/no-namespace
 declare namespace AstroOpenAPI {
@@ -20,18 +23,39 @@ declare namespace AstroOpenAPI {
 }
 
 export async function getClient<T = AstroOpenAPI.Client>(
+	/**
+	 * Defaults to
+	 * `SITE` + `BASE_URL` + `/api/openapi.json`
+	 */
 	bundleUrl = defaultBundleUrl,
+
+	/**
+	 * For app-tied client, not external ones
+	 */
+	devOverride = false,
 ) {
+	const definition = await fetch(bundleUrl)
+		.then((r) => r.json() as unknown as OpenAPIV3_1.Document)
+		.catch((e) => {
+			console.log(bundleUrl);
+			throw e;
+		});
+
+	if (definition.servers?.length && devOverride) {
+		definition.servers[0].url = apiUrl;
+	}
+
+	console.log({ definition });
+
 	const api = new OpenAPIClientAxios({
 		quick: true,
 
-		definition: (await fetch(bundleUrl).then(
-			(r) => r.json() as unknown,
-		)) as OpenAPIV3_1.Document,
-		// definition: apiDoc as OpenAPIV3_1.Document,
+		definition,
 	});
 
-	api.init().catch(() => undefined);
+	api.init().catch((e) => {
+		throw e;
+	});
 	const client = await api.getClient<T>();
 	return client;
 }

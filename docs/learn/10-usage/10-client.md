@@ -46,7 +46,9 @@ console.log(newPerson.data);
 import { getClient } from '@astro-openapi/client';
 import type { ExternalOas } from 'my-external-api/oas-client-types';
 
-export const myExternalClient = await getClient<ExternalOas>();
+export const myExternalClient = await getClient<ExternalOas>(
+	/* bundleUrl */ 'https://petstore3.swagger.io/api/v3/openapi.json',
+);
 
 myExternalClient.doStuff(/* … */);
 ```

@@ -1,37 +1,46 @@
-// FIXME: Not working when packaged
-// import SwaggerUI from 'swagger-ui';
-// import { SwaggerUIBundle } from 'swagger-ui-dist';
-import type { SwaggerUIBundle as SwaggerUIBundleT } from 'swagger-ui-dist';
-// @ts-expect-error ...
-import SwaggerUIBundle from 'swagger-ui-dist/swagger-ui-es-bundle.js';
+// // FIXME: Not working when packaged
+// // import SwaggerUI from 'swagger-ui';
+// // import { SwaggerUIBundle } from 'swagger-ui-dist';
+// import type { SwaggerUIBundle as SwaggerUIBundleT } from 'swagger-ui-dist';
+// // @ ts-expect-error ...
+// import 'swagger-ui-dist/swagger-ui-es-bundle.js';
 
-// @ts-expect-error ...
-import swaggerBaseStyles from 'swagger-ui/dist/swagger-ui.css?url';
-// @ts-expect-error ...
-import swaggerDarkModeOverrides from './lib/swagger-dark/swagger-dark.css?url';
+// // import swaggerBaseStyles from 'swagger-ui/dist/swagger-ui.css?url';
+// // @ts-expect-error ...
+// import swaggerBaseStyles from 'swagger-ui-dist/swagger-ui.css?url';
+// // @ts-expect-error ...
+// import swaggerDarkModeOverrides from './lib/swagger-dark/swagger-dark.css?url';
 
-class OpenApiGui extends HTMLElement {
-	connectedCallback() {
-		const { url } = this.dataset;
-		if (!url) return;
+// declare global {
+// 	interface Window {
+// 		SwaggerUIBundle: SwaggerUIBundleT;
+// 	}
+// }
 
-		const shadowClosed = this.attachShadow({ mode: 'closed' });
+// // throw Error('No');
 
-		const container = document.createElement('div');
+// class OpenApiGui extends HTMLElement {
+// 	connectedCallback() {
+// 		const { url } = this.dataset;
+// 		if (!url) return;
 
-		const stylesBase = document.createElement('link');
-		stylesBase.rel = 'stylesheet';
-		stylesBase.href = swaggerBaseStyles;
-		const stylesDark = document.createElement('link');
-		stylesDark.rel = 'stylesheet';
-		stylesDark.href = swaggerDarkModeOverrides;
+// 		const shadowClosed = this.attachShadow({ mode: 'closed' });
 
-		shadowClosed.append(stylesBase);
-		shadowClosed.append(stylesDark);
+// 		const container = document.createElement('div');
 
-		shadowClosed.append(container);
-		(SwaggerUIBundle as SwaggerUIBundleT)({ url, domNode: container });
-	}
-}
+// 		const stylesBase = document.createElement('link');
+// 		stylesBase.rel = 'stylesheet';
+// 		stylesBase.href = swaggerBaseStyles;
+// 		const stylesDark = document.createElement('link');
+// 		stylesDark.rel = 'stylesheet';
+// 		stylesDark.href = swaggerDarkModeOverrides;
 
-customElements.define('open-api-gui', OpenApiGui);
+// 		shadowClosed.append(stylesBase);
+// 		shadowClosed.append(stylesDark);
+
+// 		shadowClosed.append(container);
+// 		window.SwaggerUIBundle({ url, domNode: container });
+// 	}
+// }
+
+// customElements.define('open-api-gui', OpenApiGui);

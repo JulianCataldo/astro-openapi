@@ -25,7 +25,7 @@ pnpm astro add \
                 @astro-openapi/backend \
                 @astro-openapi/typegen \
                 @astro-openapi/bundler \
-pnpm install    @astro-openapi/client
+                @astro-openapi/client
 
 
 #               — Documentation GUIs —
@@ -35,18 +35,6 @@ pnpm astro add \
                 @astro-openapi/gui-elements \
                 @astro-openapi/gui-redoc
 ```
-
-<!-- ```sh
-
-#               — Peer dependencies —
-
-pnpm install \
-                openapi-backend \
-                openapi-client-axios-typegen \
-                @apidevtools/swagger-parser \
-                openapi-client-axios
-
-``` -->
 
 You should now have those integrations in your Astro configuration:
 
@@ -64,7 +52,15 @@ export default defineConfig({
 	integrations: [
 		//
 		openapiBackend(),
+		openapiClient(),
 		openapiTypegen(),
+		openapiBundler(),
+
+		openapiGuiSwagger(),
+		openapiGuiElements(),
+		openapiGuiRedoc(),
 	],
 });
 ```
+
+See a complete config example here: [./demo/astro.config.mjs](https://github.com/JulianCataldo/astro-openapi/blob/main/demo/astro.config.mjs).

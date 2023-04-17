@@ -17,14 +17,14 @@ import type { OperationMethods } from 'astro-openapi:types'; // < Auto-generated
 
 // import * as products from './products.js';
 // import * as users from './users.js';
-import * as pets from './pets.js';
+import * as persons from './persons.js';
 
 type Operations<OM> = Record<keyof OM, AstroOperationHandler>;
 
 export const operations: Operations<OperationMethods> = {
 	// ...products,
 	// ...users,
-	...pets,
+	...persons,
 };
 
 // /* Generic operations */
@@ -39,8 +39,8 @@ export const operations: Operations<OperationMethods> = {
 You can choose to organize your operations like this, depending on the amount of code:
 
 1. **Directly** in the `index.ts` if they're short enough
-1. By **entity type**, in a separate files, grouping all operations. Eg. `pets.ts`
-1. By **operation names**, in sub-folder. E.g. `pets/findPets.ts`…
+1. By **entity type**, in a separate files, grouping all operations. Eg. `persons.ts`
+1. By **operation names**, in sub-folder. E.g. `persons/findPersons.ts`…
 
 > **Note**
 > In our examples, operations are splitted by **entity** (2), a medium, sensible default for most.  
@@ -50,18 +50,18 @@ You can choose to organize your operations like this, depending on the amount of
 > entry point for the OpenAPI backend to source from.
 
 ```sh
-touch ./src/services/pets.ts
+touch ./src/services/persons.ts
 ```
 
 ```ts
-// ./src/services/pets.ts
+// ./src/services/persons.ts
 import type { AstroOperationHandler } from '@astro-openapi/backend';
 import type { Paths } from '../types/openapi.js';
 
-export const findPets: AstroOperationHandler<
+export const findPersons: AstroOperationHandler<
 	/* Body */ undefined,
 	/* Params */ undefined,
-	/* Query */ Paths.FindPets.QueryParameters
+	/* Query */ Paths.FindPersons.QueryParameters
 	/* Headers */ // undefined,
 	/* Cookie */ // undefined,
 > = (openapi, _astro) => {
@@ -78,4 +78,4 @@ export const findPets: AstroOperationHandler<
 //  ...
 ```
 
-See [./demo/src/services/pets.ts](https://github.com/JulianCataldo/astro-openapi/tree/main/demo/src/services/pets.ts) for inspiration.
+See [./demo/src/services/persons.ts](https://github.com/JulianCataldo/astro-openapi/tree/main/demo/src/services/persons.ts) for inspiration.
